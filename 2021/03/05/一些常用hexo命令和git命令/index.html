@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Yuukyou&#39;s blog">
+    <meta name="keywords" content="一些常用hexo命令和git命令, Yuukyou&#39;s blog">
     <meta name="description" content="������yuukyou�ĸ��˲���">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Yuukyou&#39;s blog</title>
+    <title>一些常用hexo命令和git命令 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">一些常用hexo命令和git命令</h1>
                 </div>
             </div>
         </div>
@@ -346,12 +346,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/git-hexo/">
+                                <span class="chip bg-color">git&amp;hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/code/" class="post-category">
+                                code
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -360,7 +373,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-02
+                    2021-03-05
                 </div>
                 
 
@@ -369,7 +382,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    176
                 </div>
                 
 
@@ -396,19 +409,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="常用的hexo-amp-git命令"><a href="#常用的hexo-amp-git命令" class="headerlink" title="常用的hexo &amp; git命令"></a>常用的hexo &amp; git命令</h1><h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><p><code>$ hexo new 'titile'</code></p>
+<p>新建文章<br></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p><code> $ hexo clean</code> </p>
+<p>清除缓存和已生成静态文件<br></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<p><code>$ hexo g</code></p>
+<p>生成静态文件<br></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p><code> $ hexo s</code></p>
+<p>启动服务器<br></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><code>$ hexo d</code></p>
+<p>部署网站<br></p>
+<h3 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h3><p><code>$ git init</code></p>
+<p>在当前目录新建一个git代码库</p>
+<br>
+
+<p><code>$ git status</code></p>
+<p>查看跟踪状态</p>
+<br>
+
+<p><code>$ git add flies（.）</code></p>
+<p>把本地文件添加到暂存区（.  添加当前目录所有文件到暂存区）</p>
+<br>
+
+<p><code>$ git commit </code></p>
+<p>添加到本地仓库</p>
+<br>
+
+<p><code>$ git push</code></p>
+<p>添加到远程仓库</p>
+<br>
+
+<p><code>$ git pull</code></p>
+<p>从远程拉到本地仓库</p>
+<br>
+
+<p><code>$ git branch</code></p>
+<p>查看分支</p>
+<br>
+
+<p><code>$ git branch name</code></p>
+<p>新建name分支</p>
+<br>
+
+<p><code>$ git checkout -b [branch name]</code></p>
+<p>新建一个分支，并切换到该分支</p>
+<br>
+
+<p><code> $git checkout -d [branch name]</code> </p>
+<p>删除分支</p>
 
                 
             </div>
@@ -435,7 +491,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/02/hello-world/">http://example.com/2021/03/02/hello-world/</a>
+                    <a href="http://example.com/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/">http://example.com/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -472,7 +528,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/git-hexo/">
+                                    <span class="chip bg-color">git&amp;hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -908,9 +968,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="一些常用hexo命令和git命令">
+                        
+                        <span class="card-title">一些常用hexo命令和git命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/code/" class="post-category">
+                                    code
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git-hexo/">
+                        <span class="chip bg-color">git&amp;hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/03/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
                     <div class="card-image">
@@ -928,9 +1039,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -951,44 +1062,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/03/02/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Yuukyou
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
