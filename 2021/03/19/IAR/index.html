@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="一些常用hexo命令和git命令, Yuukyou&#39;s blog">
+    <meta name="keywords" content="关于IAR&amp;STM32调试过程问题记录, Yuukyou&#39;s blog">
     <meta name="description" content="������yuukyou�ĸ��˲���">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>一些常用hexo命令和git命令 | Yuukyou&#39;s blog</title>
+    <title>关于IAR&amp;STM32调试过程问题记录 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -227,12 +227,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一些常用hexo命令和git命令</h1>
+                    <h1 class="description center-align post-title">关于IAR&amp;STM32调试过程问题记录</h1>
                 </div>
             </div>
         </div>
@@ -348,8 +348,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git-hexo/">
-                                <span class="chip bg-color">git&amp;hexo</span>
+                            <a href="/tags/IAR/">
+                                <span class="chip bg-color">IAR</span>
+                            </a>
+                        
+                            <a href="/tags/STM32/">
+                                <span class="chip bg-color">STM32</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%94%B5%E8%84%91%E9%BC%A0/">
+                                <span class="chip bg-color">电脑鼠</span>
                             </a>
                         
                     </div>
@@ -360,8 +368,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/code/" class="post-category">
-                                code
+                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" class="post-category">
+                                嵌入式开发
                             </a>
                         
                     </div>
@@ -373,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-05
+                    2021-03-19
                 </div>
                 
 
@@ -382,7 +390,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    176
+                    720
                 </div>
                 
 
@@ -409,62 +417,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="常用的hexo-amp-git命令"><a href="#常用的hexo-amp-git命令" class="headerlink" title="常用的hexo &amp; git命令"></a>常用的hexo &amp; git命令</h1><h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><p><code>$ hexo new 'titile'</code></p>
-<p>新建文章<br></p>
-<br>
+                <h2 id="IAR烧录时提示没有设备连接"><a href="#IAR烧录时提示没有设备连接" class="headerlink" title="IAR烧录时提示没有设备连接"></a>IAR烧录时提示没有设备连接</h2><p>当连接好电脑鼠并且检查线路没有问题并且驱动程序正常运行时，点击调试，出现“STM32 no emulator connected via USB…..”提示。</p>
+<p>在网上查找了很多资料基本上4个问题：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、板子一定要供电！</span><br><span class="line"></span><br><span class="line">2、ST-LINK是否接触不良</span><br><span class="line">确保ST-LINK跟板子连接完好</span><br><span class="line"></span><br><span class="line">3、按住reset点击download</span><br><span class="line">硬件和接线都没问题情况下，这时候可能是SWD的引脚被占用了，或者被禁用了。</span><br><span class="line">这时候ST-LINK自然无法通过SWD跟板子通信，所以才会提示No Target connected。</span><br><span class="line">所以，这时候按住reset，再点击download，再松开reset。原理就是在程序运行到SWD引脚占用之前，把新的程序烧录进去，抢个时间差。但是这招不是每次都管用，有概率性失败。</span><br><span class="line">但是不要紧，我们还有第四招</span><br><span class="line"></span><br><span class="line">4、boot0 接高电平download正常程序后，再接回低电平，即可烧录</span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「小康师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https://blog.csdn.net/kangweijian/article/details/107564868```</span><br></pre></td></tr></tbody></table></figure>
 
-<p><code> $ hexo clean</code> </p>
-<p>清除缓存和已生成静态文件<br></p>
-<br>
-
-<p><code>$ hexo g</code></p>
-<p>生成静态文件<br></p>
-<br>
-
-<p><code> $ hexo s</code></p>
-<p>启动服务器<br></p>
-<br>
-
-<p><code>$ hexo d</code></p>
-<p>部署网站<br></p>
-<h3 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h3><p><code>$ git init</code></p>
-<p>在当前目录新建一个git代码库</p>
-<br>
-
-<p><code>$ git status</code></p>
-<p>查看跟踪状态</p>
-<br>
-
-<p><code>$ git add flies（.）</code></p>
-<p>把本地文件添加到暂存区（.  添加当前目录所有文件到暂存区）</p>
-<br>
-
-<p><code>$ git commit </code></p>
-<p>添加到本地仓库</p>
-<br>
-
-<p><code>$ git push</code></p>
-<p>添加到远程仓库</p>
-<br>
-
-<p><code>$ git pull</code></p>
-<p>从远程拉到本地仓库</p>
-<br>
-
-<p><code>$ git branch</code></p>
-<p>查看分支</p>
-<br>
-
-<p><code>$ git branch name</code></p>
-<p>新建name分支</p>
-<br>
-
-<p><code>$ git checkout -b [branch name]</code></p>
-<p>新建一个分支，并切换到该分支</p>
-<br>
-
-<p><code> $git checkout -d [branch name]</code> </p>
-<p>删除分支</p>
+<p>但是这4个方法我都试过一遍<strong>还是没有解决。</strong></p>
+<p>最后看到一篇文章受到启发：<a target="_blank" rel="noopener" href="https://blog.csdn.net/c1063891514/article/details/81545601">https://blog.csdn.net/c1063891514/article/details/81545601</a></p>
+<p>解决方法与链接文章没太大关系</p>
+<p>是这篇文章最后两张图引起了我的注意，便想是不是连接设备接口没设置对，设置好接口果然设备连接成功了！！！具体步骤如下：</p>
+<p>1、右键点击demo-Debug，选择Opotions</p>
+<p><img src="/2021/03/19/IAR/IAR%5C1.jpg" alt="image-1"></p>
+<p>2、选择Debugger设置Driver为图示<img src="/2021/03/19/IAR/IAR%5C2.jpg" alt="image-2"></p>
+<p>3、点击Download设置，将图示√上即可<img src="/2021/03/19/IAR/IAR%5C3.jpg" alt="image-3"></p>
+<p>点击OK后IAR即可正常识别设备，记得<em><strong>编译</strong></em>后，再烧录！！</p>
+<p>电脑鼠连接不上电脑这个问题真的困扰了我们队伍好久！找老师又找学长又找老师又找学长,头发都快给我薅没了！体会还蛮深刻的，网络真的是个好东西，不懂的多问问别人，虽然别人不一定能帮你解决问题，但是会给你启发！</p>
+<p>最后发个喜报！我买的域名终于过审了！！！！普天同庆！！！</p>
+<p>之前因为重重问题来来回回和腾讯打了5、6个电话，修改又驳回4次信息，最后腾讯还是冒着风险帮我把备案提交给管局的，真的差点我都不想要这个域名了，心底一块石头终于落地了。</p>
+<p>如果你觉得这篇文章解决了你的问题或者说对你还有用的话，欢迎打赏博主一块小饼干⸜₍๑•⌔•๑ ₎⸝。</p>
+<p>如果有什么问题可以在评论区底下留言哦，欢迎交流<em>⸜( •ᴗ• )⸝</em></p>
 
                 
             </div>
@@ -491,7 +461,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/">http://example.com/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/</a>
+                    <a href="http://example.com/2021/03/19/IAR/">http://example.com/2021/03/19/IAR/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -529,8 +499,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git-hexo/">
-                                    <span class="chip bg-color">git&amp;hexo</span>
+                                <a href="/tags/IAR/">
+                                    <span class="chip bg-color">IAR</span>
+                                </a>
+                            
+                                <a href="/tags/STM32/">
+                                    <span class="chip bg-color">STM32</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%94%B5%E8%84%91%E9%BC%A0/">
+                                    <span class="chip bg-color">电脑鼠</span>
                                 </a>
                             
                         </div>
@@ -968,9 +946,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/19/IAR/">
                     <div class="card-image">
@@ -988,9 +967,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1003,6 +982,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1029,13 +1009,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
+                <a href="/2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="进来随便聊聊叭">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="一些常用hexo命令和git命令">
                         
-                        <span class="card-title">进来随便聊聊叭</span>
+                        <span class="card-title">一些常用hexo命令和git命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1052,8 +1032,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/code/" class="post-category">
+                                    code
                                 </a>
                             
                             
@@ -1063,8 +1043,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/flag/">
-                        <span class="chip bg-color">flag</span>
+                    <a href="/tags/git-hexo/">
+                        <span class="chip bg-color">git&amp;hexo</span>
                     </a>
                     
                 </div>

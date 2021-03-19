@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>关于IAR&amp;STM32调试过程问题记录</title>
+      <link href="2021/03/19/IAR/"/>
+      <url>2021/03/19/IAR/</url>
+      
+        <content type="html"><![CDATA[<h2 id="IAR烧录时提示没有设备连接"><a href="#IAR烧录时提示没有设备连接" class="headerlink" title="IAR烧录时提示没有设备连接"></a>IAR烧录时提示没有设备连接</h2><p>当连接好电脑鼠并且检查线路没有问题并且驱动程序正常运行时，点击调试，出现“STM32 no emulator connected via USB…..”提示。</p><p>在网上查找了很多资料基本上4个问题：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、板子一定要供电！</span><br><span class="line"></span><br><span class="line">2、ST-LINK是否接触不良</span><br><span class="line">确保ST-LINK跟板子连接完好</span><br><span class="line"></span><br><span class="line">3、按住reset点击download</span><br><span class="line">硬件和接线都没问题情况下，这时候可能是SWD的引脚被占用了，或者被禁用了。</span><br><span class="line">这时候ST-LINK自然无法通过SWD跟板子通信，所以才会提示No Target connected。</span><br><span class="line">所以，这时候按住reset，再点击download，再松开reset。原理就是在程序运行到SWD引脚占用之前，把新的程序烧录进去，抢个时间差。但是这招不是每次都管用，有概率性失败。</span><br><span class="line">但是不要紧，我们还有第四招</span><br><span class="line"></span><br><span class="line">4、boot0 接高电平download正常程序后，再接回低电平，即可烧录</span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「小康师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https://blog.csdn.net/kangweijian/article/details/107564868```</span><br></pre></td></tr></tbody></table></figure><p>但是这4个方法我都试过一遍<strong>还是没有解决。</strong></p><p>最后看到一篇文章受到启发：<a href="https://blog.csdn.net/c1063891514/article/details/81545601">https://blog.csdn.net/c1063891514/article/details/81545601</a></p><p>解决方法与链接文章没太大关系</p><p>是这篇文章最后两张图引起了我的注意，便想是不是连接设备接口没设置对，设置好接口果然设备连接成功了！！！具体步骤如下：</p><p>1、右键点击demo-Debug，选择Opotions</p><p><img src="/2021/03/19/IAR/IAR%5C1.jpg" alt="image-1"></p><p>2、选择Debugger设置Driver为图示<img src="/2021/03/19/IAR/IAR%5C2.jpg" alt="image-2"></p><p>3、点击Download设置，将图示√上即可<img src="/2021/03/19/IAR/IAR%5C3.jpg" alt="image-3"></p><p>点击OK后IAR即可正常识别设备，记得<em><strong>编译</strong></em>后，再烧录！！</p><p>电脑鼠连接不上电脑这个问题真的困扰了我们队伍好久！找老师又找学长又找老师又找学长,头发都快给我薅没了！体会还蛮深刻的，网络真的是个好东西，不懂的多问问别人，虽然别人不一定能帮你解决问题，但是会给你启发！</p><p>最后发个喜报！我买的域名终于过审了！！！！普天同庆！！！</p><p>之前因为重重问题来来回回和腾讯打了5、6个电话，修改又驳回4次信息，最后腾讯还是冒着风险帮我把备案提交给管局的，真的差点我都不想要这个域名了，心底一块石头终于落地了。</p><p>如果你觉得这篇文章解决了你的问题或者说对你还有用的话，欢迎打赏博主一块小饼干⸜₍๑•⌔•๑ ₎⸝。</p><p>如果有什么问题可以在评论区底下留言哦，欢迎交流<em>⸜( •ᴗ• )⸝</em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 嵌入式开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IAR </tag>
+            
+            <tag> STM32 </tag>
+            
+            <tag> 电脑鼠 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些常用hexo命令和git命令</title>
       <link href="2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/"/>
       <url>2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/</url>
