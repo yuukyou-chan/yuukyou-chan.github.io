@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>关于Json格式和Ajax的学习</title>
+      <link href="2021/03/22/JsonAndAjax/"/>
+      <url>2021/03/22/JsonAndAjax/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>JSON格式</p></blockquote><p>基本语法：</p><ul><li><p>对象表示为键值对，数据用逗号分隔</p></li><li><p>花括号保存数组对象</p></li><li><p>方括号保存数组</p><p><strong>JSON 键值对</strong>是用来保存 JavaScript 对象的一种方式，和 JavaScript 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值：</p><figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"name"</span>: <span class="string">"QinJiang"</span>}</span><br><span class="line">{<span class="attr">"age"</span>: <span class="string">"3"</span>}</span><br><span class="line">{<span class="attr">"sex"</span>: <span class="string">"男"</span>}</span><br></pre></td></tr></tbody></table></figure></li></ul><p><strong>JSON与JavaScript的关系：</strong></p><p>   JSON 是 JavaScript 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</p><p><strong>JSON 和 JavaScript 对象互转</strong></p><p>要实现从JSON字符串转换为JavaScript 对象，使用 JSON.parse() 方法：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = JSON.parse('{"a": "Hello", "b": "World"}');</span><br><span class="line">//结果是 {a: 'Hello', b: 'World'}</span><br></pre></td></tr></tbody></table></figure><p>要实现从JavaScript 对象转换为JSON字符串，使用 JSON.stringify() 方法：</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var json = JSON.stringify({a: 'Hello', b: 'World'});</span><br><span class="line">//结果是 '{"a": "Hello", "b": "World"}'</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Json </tag>
+            
+            <tag> Ajax </tag>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于IAR&amp;STM32调试过程问题记录</title>
       <link href="2021/03/19/IAR/"/>
       <url>2021/03/19/IAR/</url>
@@ -34,10 +63,10 @@
     
     <entry>
       <title>一些常用hexo命令和git命令</title>
-      <link href="2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/"/>
-      <url>2021/03/05/%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4%E5%92%8Cgit%E5%91%BD%E4%BB%A4/</url>
+      <link href="2021/03/05/GitAndHexo/"/>
+      <url>2021/03/05/GitAndHexo/</url>
       
-        <content type="html"><![CDATA[<h1 id="常用的hexo-amp-git命令"><a href="#常用的hexo-amp-git命令" class="headerlink" title="常用的hexo &amp; git命令"></a>常用的hexo &amp; git命令</h1><h3 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h3><p><code>$ hexo new 'titile'</code></p><p>新建文章<br></p><br><p><code> $ hexo clean</code> </p><p>清除缓存和已生成静态文件<br></p><br><p><code>$ hexo g</code></p><p>生成静态文件<br></p><br><p><code> $ hexo s</code></p><p>启动服务器<br></p><br><p><code>$ hexo d</code></p><p>部署网站<br></p><h3 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h3><p><code>$ git init</code></p><p>在当前目录新建一个git代码库</p><br><p><code>$ git status</code></p><p>查看跟踪状态</p><br><p><code>$ git add flies（.）</code></p><p>把本地文件添加到暂存区（.  添加当前目录所有文件到暂存区）</p><br><p><code>$ git commit </code></p><p>添加到本地仓库</p><br><p><code>$ git push</code></p><p>添加到远程仓库</p><br><p><code>$ git pull</code></p><p>从远程拉到本地仓库</p><br><p><code>$ git branch</code></p><p>查看分支</p><br><p><code>$ git branch name</code></p><p>新建name分支</p><br><p><code>$ git checkout -b [branch name]</code></p><p>新建一个分支，并切换到该分支</p><br><p><code> $git checkout -d [branch name]</code> </p><p>删除分支</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="常用Hexo-amp-Git操作"><a href="#常用Hexo-amp-Git操作" class="headerlink" title="常用Hexo &amp; Git操作"></a>常用Hexo &amp; Git操作</h1><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="使用hexo新建文章"><a href="#使用hexo新建文章" class="headerlink" title="使用hexo新建文章"></a>使用hexo新建文章</h3><br><ul><li>新建文章命令 ：<code>$ hexo new &lt;title&gt;</code></li></ul><p>输入上行命令之后在post文件夹出现两个文件，title文件夹用于存放图片资源；md文件则用于书写文章。</p><ul><li>在md文件头部信息补充分类信息：<code>categories:</code>(注意空格)</li></ul><p><strong>md常用语法：</strong></p><ol><li><p>标题：<code>#H1    一级标签...</code></p></li><li><p>无序列表：<code>+ 123  /- 123  /* 123</code></p></li><li><p>有序列表：<code>1. ABC  /2. ABC  /3.ABC</code></p></li><li><p>引用说明区块：<code>&gt; 引用内容</code></p></li><li><p>代码块：<code>1.少量代码，单行使用，直接用`包起来   2.大量代码需要多行使用，用三个`包裹起来</code></p></li><li><p>在文章中插入图片：<code>![1](./title/1.jpg)</code></p></li><li><p>链接：<code>链接的文字放在[]中，链接地址放在随后的()中，链接也可以带title属性，链接地址后面空一格，然后用引号引起来:[简书](https://www.jianshu.com "创作你的创作")</code></p></li><li><p>分割线：</p><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="bullet">-</span> - -</span><br><span class="line">------</span><br><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="strong"><span class="emphasis">*</span> <span class="emphasis">* *</span></span></span><br><span class="line"><span class="strong">**</span><span class="strong">****</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br><span class="line"><span class="strong"><span class="emphasis">_</span> <span class="emphasis">_ _</span></span></span><br><span class="line"><span class="strong">__</span><span class="strong">____</span></span><br></pre></td></tr></tbody></table></figure></li><li><p>首行缩进</p><figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&amp;emsp; or &amp;#8195;  表示一个全角的空格</span><br><span class="line">&amp;emsp;&amp;emsp; 两个全角的空格（用的比较多）</span><br></pre></td></tr></tbody></table></figure></li></ol><br><h3 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h3><p><code> $ hexo clean</code> </p><p>清除缓存和已生成静态文件<br></p><br><p><code>$ hexo g</code></p><p>生成静态文件<br></p><br><p><code> $ hexo s</code></p><p>启动服务器<br></p><br><p><code>$ hexo d</code></p><p>部署网站<br></p><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="使用git管理代码版本"><a href="#使用git管理代码版本" class="headerlink" title="使用git管理代码版本"></a>使用git管理代码版本</h3><h3 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h3><p><code>$ git init</code></p><p>在当前目录新建一个git代码库</p><br><p><code>$ git status</code></p><p>查看跟踪状态</p><br><p><code>$ git add flies（.）</code></p><p>把本地文件添加到暂存区（.  添加当前目录所有文件到暂存区）</p><br><p><code>$ git commit </code></p><p>添加到本地仓库</p><br><p><code>$ git push</code></p><p>添加到远程仓库</p><br><p><code>$ git pull</code></p><p>从远程拉到本地仓库</p><br><p><code>$ git branch</code></p><p>查看分支</p><br><p><code>$ git branch name</code></p><p>新建name分支</p><br><p><code>$ git checkout -b [branch name]</code></p><p>新建一个分支，并切换到该分支</p><br><p><code> $git checkout -d [branch name]</code> </p><p>删除分支</p><br>]]></content>
       
       
       <categories>
@@ -59,8 +88,8 @@
     
     <entry>
       <title>进来随便聊聊叭</title>
-      <link href="2021/03/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-      <url>2021/03/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+      <link href="2021/03/05/MyFristBlog/"/>
+      <url>2021/03/05/MyFristBlog/</url>
       
         <content type="html"><![CDATA[<p>非常欢迎你来到我的博客，这是我的第一篇文章，我也不懂要写什么，就随便唠一下吧。</p><h4 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h4><p>​        我先介绍一下我自己吧，00后的大表哥，游手好闲无业网民，最喜欢吃大柳州的螺蛳粉，长板板混（蹲个大佬一起磕招），喜欢摄影，代码小菜鸡，秃头预备选手，只喜欢写一些实用代码（有好的点子一起交流）。</p><h4 id="建站故事"><a href="#建站故事" class="headerlink" title="建站故事"></a>建站故事</h4><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本来说20年的寒假要搭建这个个人博客的，当时非常幸运地在南京参与电影《非常替身》制作，担任实习剪辑助理一职，由于工作太“闲”了，我就开始对未来思考，于是乎就有了搭建这个博客的想法。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一开始我是想搭一个我们学校滑板论坛的，但是考虑到实用性和推广难度就放弃了。然后在寒假断断续续的看了一点vue，学了几天myslq，flag就开始立起来了，说是这个寒假完成，然后回到家就开始玩了。。。剩最后10天开学了，我才抓紧起来，建站过程挺曲折的，一个方面是因为我的拖延，另一个方面源自于自我的不肯定，东一下学js，西一下学vue，学了一下mysql，又想下学期就有数据库的课，现在会不会太着急了，想学Spring又怕跳的太快，只知道wordpress又懒得学php……就这样一直和自己的想法对抗中，好像我就是纠结体本身，终于最后被逼到什么都来不及学，直接建站！事实证明在建站过程中学习，比先学再做来得更高效直接，回顾以前自学python、html、css的时候也是等不及慢慢啃知识点，直接实战了。本在在Gitpage上面部署过一次博客（已经能用的那种），后来又想买个服务器和域名玩一下，就又重新整了一套。</p><p>就好像在博客首页的“送你一颗子弹”一样</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最后选择了hexo这个框架也是蛮幸运的，他刚好是基于前端三剑客的框架，不用再学php了（投降）。但是它的缺点是没有直接管理网站文章的后台，随便吧。</p><blockquote><p>就这样这个博客就稀里糊涂的建了起来。</p></blockquote><h4 id="立一些flag"><a href="#立一些flag" class="headerlink" title="立一些flag"></a>立一些flag</h4><blockquote><p>虽然说这个博客是搬别人的框架，但是二次开发我也费了蛮多心血的，改动还是蛮多的，修饰博客的界面就像装潢自己小窝一样。</p></blockquote><p>Flag1：以后在这个博客上面主要发一些学习笔记吧，也会发一些书摘，随笔，可能会上线说说板块</p><p>Flag2：等我学会调用API了会上线识别qq账号留言评论功能，大家就能有头像啦！</p><p>Flag3：“什么时候心血来潮”上线滑板、相册、vlog板块</p><p>Flag4：每周更新两篇文章（！！！一定要做到！！！）</p><p>Flag5：给自己的网站设计一个logo并且用PS或者AI做出来（应该不难）</p><p>Flag6：把写过的代码都上传到github上</p><h4 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这么辛苦码字就是为了见你一面，留下你的脚印吧我的朋友,非常欢迎评论区或者留言互动！期待你的留言！</p>]]></content>
       
@@ -77,19 +106,6 @@
             <tag> flag </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="2021/03/02/hello-world/"/>
-      <url>2021/03/02/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
