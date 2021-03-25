@@ -18,6 +18,7 @@
 
     <title>关于 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
@@ -119,6 +120,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/shuoshuo" class="waves-effect waves-light">
+      
+      <i class="fas fa-comment" style="zoom: 0.6;"></i>
+      
+      <span>shuoshuo</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -207,6 +219,17 @@
 			    <i class="fa-fw fas fa-comments"></i>
 			
 			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/shuoshuo" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comment"></i>
+			
+			shuoshuo
 		</a>
           
         </li>
@@ -414,7 +437,7 @@
                     </div>
                 </div>
 
-                <div class="introduction center-align" data-aos="fade-up">半个有趣的代码小菜鸡</div>
+                <div class="introduction center-align" data-aos="fade-up">半个有趣又浪漫的代码小菜鸡</div>
 
                 <style type="text/css">
     #posts-chart,
@@ -517,7 +540,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"code","value":1},{"name":"嵌入式开发","value":1},{"name":"随笔","value":1},{"name":"前端","value":1}],
+                data: [{"name":"code","value":1},{"name":"嵌入式开发","value":1},{"name":"前端","value":1},{"name":"随笔","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -541,7 +564,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["git&hexo","IAR","STM32","电脑鼠","flag","Json","Ajax","前端"]
+                data: ["git&hexo","IAR","STM32","电脑鼠","Json","Ajax","前端","flag"]
             }
         ],
         yAxis: [
@@ -696,12 +719,6 @@
             
             
             
-            <a href="/tags/flag/">
-                <span class="chip center-align waves-effect waves-light chip-default">flag</span>
-            </a>
-            
-            
-            
             <a href="/tags/Json/">
                 <span class="chip center-align waves-effect waves-light chip-default">Json</span>
             </a>
@@ -719,6 +736,12 @@
             </a>
             
             
+            
+            <a href="/tags/flag/">
+                <span class="chip center-align waves-effect waves-light chip-default">flag</span>
+            </a>
+            
+            
         </div>
     </div>
     
@@ -729,6 +752,15 @@
 
                 
                 
+                
+                <script type="text/javascript" src="//cdn.jsdelivr.net/npm/artitalk"></script>
+<div id="artitalk_main"></div>
+<script>
+    new Artitalk({
+        appId: '7Lyxgx5xGj7YSyy3FQn29VXE-MdYXbMMI',
+        appKey: 'QLnKr8vXaISjev5ya9neGXwu',
+    })
+</script>
                 
                 
             </div>
@@ -793,13 +825,13 @@
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2021</span>
             
-            <span id="year">2019</span>
+            <span id="year">2021</span>
             <a href="/about" target="_blank">Yuukyou</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
@@ -820,6 +852,50 @@
             
             
             <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2021";
+                    var startMonth = "3";
+                    var startDate = "6";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
             
             <br>
             
