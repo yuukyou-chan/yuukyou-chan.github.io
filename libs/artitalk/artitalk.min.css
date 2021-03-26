@@ -61,7 +61,8 @@ div#artitalk_main {
 	margin-bottom: 0;
 }
 p img {
-	width: 350px;
+	display:block;
+	margin-top: 25px;
 }
 
 #artitalk_main div class.cdp_tmlabel>li .cbp_tmlabel {
