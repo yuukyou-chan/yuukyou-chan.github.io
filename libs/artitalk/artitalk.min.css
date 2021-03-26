@@ -60,6 +60,9 @@ div#artitalk_main {
 #artitalk_main div.cbp_tmlabel>p {
 	margin-bottom: 0;
 }
+p img {
+	width: 100%;
+}
 
 #artitalk_main div class.cdp_tmlabel>li .cbp_tmlabel {
 	margin-bottom: 0;
