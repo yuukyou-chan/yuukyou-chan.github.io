@@ -396,7 +396,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    720
+                    722
                 </div>
                 
 
@@ -415,18 +415,27 @@
         
 
         
-        <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
-        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="IAR烧录时提示没有设备连接"><a href="#IAR烧录时提示没有设备连接" class="headerlink" title="IAR烧录时提示没有设备连接"></a>IAR烧录时提示没有设备连接</h2><p>当连接好电脑鼠并且检查线路没有问题并且驱动程序正常运行时，点击调试，出现“STM32 no emulator connected via USB…..”提示。</p>
 <p>在网上查找了很多资料基本上4个问题：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、板子一定要供电！</span><br><span class="line"></span><br><span class="line">2、ST-LINK是否接触不良</span><br><span class="line">确保ST-LINK跟板子连接完好</span><br><span class="line"></span><br><span class="line">3、按住reset点击download</span><br><span class="line">硬件和接线都没问题情况下，这时候可能是SWD的引脚被占用了，或者被禁用了。</span><br><span class="line">这时候ST-LINK自然无法通过SWD跟板子通信，所以才会提示No Target connected。</span><br><span class="line">所以，这时候按住reset，再点击download，再松开reset。原理就是在程序运行到SWD引脚占用之前，把新的程序烧录进去，抢个时间差。但是这招不是每次都管用，有概率性失败。</span><br><span class="line">但是不要紧，我们还有第四招</span><br><span class="line"></span><br><span class="line">4、boot0 接高电平download正常程序后，再接回低电平，即可烧录</span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「小康师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https://blog.csdn.net/kangweijian/article/details/107564868```</span><br></pre></td></tr></tbody></table></figure>
+<pre><code class="供电">1、板子一定要供电！
 
+2、ST-LINK是否接触不良
+确保ST-LINK跟板子连接完好
+
+3、按住reset点击download
+硬件和接线都没问题情况下，这时候可能是SWD的引脚被占用了，或者被禁用了。
+这时候ST-LINK自然无法通过SWD跟板子通信，所以才会提示No Target connected。
+所以，这时候按住reset，再点击download，再松开reset。原理就是在程序运行到SWD引脚占用之前，把新的程序烧录进去，抢个时间差。但是这招不是每次都管用，有概率性失败。
+但是不要紧，我们还有第四招
+
+4、boot0 接高电平download正常程序后，再接回低电平，即可烧录
+————————————————
+版权声明：本文为CSDN博主「小康师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/kangweijian/article/details/107564868```
+</code></pre>
 <p>但是这4个方法我都试过一遍<strong>还是没有解决。</strong></p>
 <p>最后看到一篇文章受到启发：<a target="_blank" rel="noopener" href="https://blog.csdn.net/c1063891514/article/details/81545601">https://blog.csdn.net/c1063891514/article/details/81545601</a></p>
 <p>解决方法与链接文章没太大关系</p>
@@ -466,7 +475,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/19/IAR/">http://example.com/2021/03/19/IAR/</a>
+                    <a href="http://1.15.143.119/2021/03/19/IAR/">http://1.15.143.119/2021/03/19/IAR/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1175,6 +1184,31 @@
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+	
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

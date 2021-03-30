@@ -396,7 +396,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    222
+                    221
                 </div>
                 
 
@@ -415,11 +415,6 @@
         
 
         
-        <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
-        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -434,16 +429,24 @@
 </li>
 <li><p>方括号保存数组</p>
 <p><strong>JSON 键值对</strong>是用来保存 JavaScript 对象的一种方式，和 JavaScript 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 “” 包裹，使用冒号 : 分隔，然后紧接着值：</p>
-<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{<span class="attr">"name"</span>: <span class="string">"QinJiang"</span>}</span><br><span class="line">{<span class="attr">"age"</span>: <span class="string">"3"</span>}</span><br><span class="line">{<span class="attr">"sex"</span>: <span class="string">"男"</span>}</span><br></pre></td></tr></tbody></table></figure></li>
+<pre><code class="json">{"name": "QinJiang"}
+{"age": "3"}
+{"sex": "男"}
+</code></pre>
+</li>
 </ul>
 <p><strong>JSON与JavaScript的关系：</strong></p>
 <p>   JSON 是 JavaScript 对象的字符串表示法，它使用文本表示一个 JS 对象的信息，本质是一个字符串。</p>
 <p><strong>JSON 和 JavaScript 对象互转</strong></p>
 <p>要实现从JSON字符串转换为JavaScript 对象，使用 JSON.parse() 方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = JSON.parse('{"a": "Hello", "b": "World"}');</span><br><span class="line">//结果是 {a: 'Hello', b: 'World'}</span><br></pre></td></tr></tbody></table></figure>
-
+<pre><code>var obj = JSON.parse('{"a": "Hello", "b": "World"}');
+//结果是 {a: 'Hello', b: 'World'}
+</code></pre>
 <p>要实现从JavaScript 对象转换为JSON字符串，使用 JSON.stringify() 方法：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var json = JSON.stringify({a: 'Hello', b: 'World'});</span><br><span class="line">//结果是 '{"a": "Hello", "b": "World"}'</span><br></pre></td></tr></tbody></table></figure>
+<pre><code>var json = JSON.stringify({a: 'Hello', b: 'World'});
+//结果是 '{"a": "Hello", "b": "World"}'
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -469,7 +472,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/03/22/JsonAndAjax/">http://example.com/2021/03/22/JsonAndAjax/</a>
+                    <a href="http://1.15.143.119/2021/03/22/JsonAndAjax/">http://1.15.143.119/2021/03/22/JsonAndAjax/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1188,6 +1191,31 @@
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+	
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>
