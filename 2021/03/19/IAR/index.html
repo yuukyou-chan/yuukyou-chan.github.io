@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="关于IAR&amp;STM32调试过程问题记录, Yuukyou&#39;s blog">
     <meta name="description" content="������yuukyou�ĸ��˲���">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,16 +29,19 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-
+	
+	
+	
+	<link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -420,7 +423,7 @@
             <div id="articleContent">
                 <h2 id="IAR烧录时提示没有设备连接"><a href="#IAR烧录时提示没有设备连接" class="headerlink" title="IAR烧录时提示没有设备连接"></a>IAR烧录时提示没有设备连接</h2><p>当连接好电脑鼠并且检查线路没有问题并且驱动程序正常运行时，点击调试，出现“STM32 no emulator connected via USB…..”提示。</p>
 <p>在网上查找了很多资料基本上4个问题：</p>
-<pre><code class="供电">1、板子一定要供电！
+<pre><code class="line-numbers language-供电">1、板子一定要供电！
 
 2、ST-LINK是否接触不良
 确保ST-LINK跟板子连接完好
@@ -1481,6 +1484,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <div class="progress-bar"></div>
 
 
+
+
+
+<script src="/js/prism/prism.js" async></script>
+
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1643,7 +1651,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 </body>

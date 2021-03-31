@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="关于java实现自动核查作业程序check, Yuukyou&#39;s blog">
     <meta name="description" content="������yuukyou�ĸ��˲���">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,16 +29,19 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery.min.js"></script>
-
+	
+	
+	
+	<link rel="stylesheet" href="/js/prism/prism.css">
 <meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 
 
 
 <body>
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -417,8 +420,8 @@
                 <h2 id="编写背景"><a href="#编写背景" class="headerlink" title="编写背景"></a>编写背景</h2><p>  大二上学期期末的时候堆了一堆实验报告要交，数据结构2个实验，java4个实验，还有线代截图要收，每次收作业即使通知同学们按规定命名文件但还有很多同学不按规定命名五花八门啥都有，每次收作业都要收个1 个多小时才能收齐，期末都没得时间复习了<span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 <p>  然后刚好那个学期学了java，对java还比较感兴趣和熟悉，刚一考完试我就开始动手了，边学边写花了我5个小时。整个代码的实现逻辑都是自己想的，然后剩下一下没学过的类和方法在网上学习。之前用python写过一个差不多的十几行的代码实现“微信群接龙”查找名字，这个程序也是借鉴了上次的思想。</p>
 <p>  这是V1.0版本的，功能只有查找没交作业名单的功能，本来第二次更新V2.0的时候加入了自动重命名功能的，但是我今天在打开NetBeans的时候之前写代码都不见了55555，Github上也找不到（我记得当时备份了yue），现在这个代码还是我翻聊天记录找的，之前复制给别的班学委留下来的记录（还好当时发给别人过）。不然真的惨死了，真的一点都想不起来之前怎么写的了。</p>
-<p>  V2.0版本虽然新增了自动重命名功能，但是我当时并没有把学号加进去，当时是有思路的，但嫌麻烦是懒得弄了，看需要吧，如果我或者大家需要自动重命名功能的话我到时会在重新写一个完整的。</p>
-<p>  V3.0版本我当时是想做一个GUI然后打包的，方便大家使用，本来是想在暑假做的，后来暑假。。。（懂得都懂）结果现在关于GUI的知识也都已经忘完了，随缘<span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。如果哪天心血来潮的话再上线吧。</p>
+<p>  <strong>V2.0</strong>版本虽然新增了自动重命名功能，但是我当时并没有把学号加进去，当时是有思路的，但嫌麻烦是懒得弄了，看需要吧，如果我或者大家需要自动重命名功能的话我到时会在重新写一个完整的。</p>
+<p>  <strong>V3.0</strong>版本我当时是想做一个GUI然后打包的，方便大家使用，本来是想在暑假做的，后来暑假。。。（懂得都懂）结果现在关于GUI的知识也都已经忘完了，随缘<span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。如果哪天心血来潮的话再上线吧。</p>
 <p>  话不多说，开干！</p>
 <hr>
 <p>——2021.4.1更新：已经在github上找到V2.0版本的代码了，一下文章是V2.0的文档。代码版本管理真的太重要了，之前的git操作都忘了差不多了，看来得重新再看看git原理了<span class="github-emoji"><span>✊</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/270a.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>，顺便吐槽一下github打开真的太慢了，每次打开都好久好久都毛火完了，是不是该考虑转gitee了，有没有用过gitee的伙伴分享一下体验<span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji"><span>🙏</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
@@ -441,7 +444,7 @@
 <p>  使用java String 类中的contain方法即可实现。</p>
 <h4 id="重命名方法原理："><a href="#重命名方法原理：" class="headerlink" title="重命名方法原理："></a>重命名方法原理：</h4><p>等待更新……</p>
 <h2 id="源代码展示"><a href="#源代码展示" class="headerlink" title="源代码展示"></a>源代码展示</h2><p>Check类：（又重新添加了很多注释，应该不难看懂）</p>
-<pre><code class="java">package check;
+<pre><code class="line-numbers language-java">package check;
 
 import java.io.File;
 import java.io.FileReader;
@@ -499,7 +502,7 @@ public class Check {
 }
 </code></pre>
 <p>FileNames类：（一些被注释掉的代码块是当时写代码时候的其他版本，没注释的是慢慢调式过来能用的版本，大家也可以自己把注释的代码块删了）</p>
-<pre><code class="java">package check;
+<pre><code class="line-numbers language-java">package check;
 
 import java.io.File;
 import java.io.IOException;
@@ -1644,6 +1647,11 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 <div class="progress-bar"></div>
 
 
+
+
+
+<script src="/js/prism/prism.js" async></script>
+
     <!-- 搜索遮罩框 -->
 <div id="searchModal" class="modal">
     <div class="modal-content">
@@ -1806,7 +1814,7 @@ $(function () {
     
 
     
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
 </body>
