@@ -285,6 +285,12 @@
                 
             </div>
         </div>
+		
+		
+		<!-- 加入网易云音乐热门评论，实时更新 --> <div class="poem-wrap"> <div class="poem-border poem-left"> </div> <div class="poem-border poem-right"> </div> <h1>热评</h1> <p id="poem">loading...</p> <p id="info">loading...</p> </div>
+		<script> $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ if(status=='success'){ $('#poem').html(data.hitokoto) if(data.from_who!=null){ $('#info').html(data.from_who+" · "+《 "+data.from+" 》"); } else{ $('#info').html(" “ "+data.from+"” "); } } else{$('#poem').html("获取出错啦");}}); </script>
+		
+		
         <div class="card">
             
 
@@ -630,13 +636,7 @@
 				
 				
 			
-				<script> $.get("https://v1.hitokoto.cn?c=d&c=h&c=j",function(datastatus){ if(status=='success'){ $('#poem').html(data.hitokoto) if(data.from_who!=null){ $('#info').html(data.from_who+" · "+《 "+data.from+" 》"); } else{ $('#info').html(" “ "+data.from+"” "); } } else{$('#poem').html("获取出错啦");}}); </script>
-				<!-- 加入网易云音乐热门评论，实时更新 --> <div class="poem-wrap"> <div class="poem-border poem-left"> </div> <div class="poem-border poem-right"> </div> <h1>热评</h1> <p id="poem">loading...</p> <p id="info">loading...</p> </div>
-				来源: itsNekoDeng
-				文章作者: NekoDeng
-				文章链接: https://nekodeng.gitee.io/posts/blog-poem-comment.html
-				本文章著作权归作者所有，任何形式的转载都请注明出处。
-
+				
         </div>
     </div>
 </main>
