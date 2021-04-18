@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="关于爬虫爬取基金信息, Yuukyou&#39;s blog">
+    <meta name="keywords" content="数据库学习笔记（持续更新4.18）, Yuukyou&#39;s blog">
     <meta name="description" content="������yuukyou�ĸ��˲���">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于爬虫爬取基金信息 | Yuukyou&#39;s blog</title>
+    <title>数据库学习笔记（持续更新4.18） | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -231,12 +231,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于爬虫爬取基金信息</h1>
+                    <h1 class="description center-align post-title">数据库学习笔记（持续更新4.18）</h1>
                 </div>
             </div>
         </div>
@@ -352,12 +352,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                <span class="chip bg-color">爬虫</span>
-                            </a>
-                        
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">数据库，学习笔记</span>
                             </a>
                         
                     </div>
@@ -368,8 +364,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                爬虫
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
                             </a>
                         
                     </div>
@@ -381,21 +377,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-11
+                    2021-04-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-11
+                    2021-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    740
+                    509
                 </div>
                 
 
@@ -417,49 +413,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>  经常看到和听到神经网络这个名词，觉得逼格很高。昨天看了一下机器学习的神经网络算法，是挺高级的，还蛮感兴趣，就是看不懂哈哈哈哈。在B站上看了一个《一小时大话BP神经网络》教我如何从入门到放弃（打脸）。里面涉及的数学统计知识太多了，可惜我是个数学白痴，但是对机器学习确实蛮感兴趣的，神经网络学不明白可以换个简单的机器学习模型试试。后来想着能不能用机器学习预测一下基金走势，随便玩玩不做投资建议，体验一下机器学习的高大上，等我撸出机器学习模型的demo也算是半个涉足过人工智能领域的大学生了哈哈哈哈哈哈哈哈。</p>
-<p>  这篇文章便是为了提供机器学习数据基础——收集基金信息。</p>
-<h2 id="整体思路"><a href="#整体思路" class="headerlink" title="整体思路"></a>整体思路</h2><ol>
-<li>选择一个好爬的基金网页，这里以天天基金为例（网上关于天天基金爬取教程还蛮多的哈，可能是好抓包）</li>
-<li>打开浏览器的开发工具，切换到network下，点击下一页基金，查看发送的ajax请求。很容易发现有个请求里的jason数据就是我们想要的数据，抓到包就可以开始撸代码了！</li>
-<li>具体代码思路不细说了，看代码注释也比较详细了</li>
+                <h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><h1 id="第二章：关系型数据库"><a href="#第二章：关系型数据库" class="headerlink" title="第二章：关系型数据库"></a>第二章：关系型数据库</h1><blockquote>
+<h3 id="1、一些概念"><a href="#1、一些概念" class="headerlink" title="1、一些概念"></a>1、一些概念</h3></blockquote>
+<p>关系：实体与实体之间的联系（可以看做一张二维表）、</p>
+<p>候选码：若关系中的一个属性或属性组的值能够唯一地标识一个元组，且他的真子集不能唯一的标识一个元组，则称这个属性或属性组做候选码。</p>
+<p>主码：若一个关系有多个候选码，则选定其中一个为主码</p>
+<p>主属性：候选码的各个属性成为主属性</p>
+<p>全码：表中的所有属性都是这个表的候选码，则称为全码</p>
+<p><strong>外键（外码）</strong>：<mark>如果公共关键字在一个关系中是主键，那么这个公共关键字被称为另一个关系的外键。</mark></p>
+<p>关系三种类型：①基本表（基本关系）②查询表③视图表</p>
+<p>关系模式：关系的描述称为关系模式（即为表头）</p>
+<blockquote>
+<h3 id="2、关系完整性"><a href="#2、关系完整性" class="headerlink" title="2、关系完整性"></a>2、关系完整性</h3></blockquote>
+<ol>
+<li>实体完整性：实体完整性要求每个数据表都必须有主键，而作为主键的所有字段，其属性必须是独一及<strong>非空值</strong>。</li>
+<li>参照完整性：参照的关系中的属性值必须能够在被参照关系找到或者取空值</li>
+<li>用户定义完整性</li>
 </ol>
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><pre><code class="line-numbers language-python">import requests
-import json
-import re
-import pandas as pd
-
-df_list = []  #用于存放每页表格
-for index in range(1,100):  #index是url中的页码，在url中用占位符表示
-    url = 'http://api.fund.eastmoney.com/f10/lsjz?callback=jQuery1830730414064313736_1618137747657&amp;fundCode=110023&amp;pageIndex={}&amp;pageSize=20&amp;startDate=&amp;endDate=&amp;_=1618137795389'.format(index)
-
-    #请求头
-
-    headers = {
-        #防盗链     确定来路
-        'Referer': 'http://fundf10.eastmoney.com/',
-        #身份证
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'
-    }
-    # 模拟浏览器发送请求  接收数据
-    resp = requests.get(url,headers=headers)
-    html = resp.text
-    res = re.findall('\((.*?)\)',html) #正则表达式把jquery....去掉
-    datas = json.loads(res[0])["Data"]["LSJZList"] # res是数组，要用res[0]表示
-                                                   # json.loads 用于提取字符串中的json格式
-    # 整理成表的形式
-    df = pd.DataFrame(datas)
-    df_list.append(df)  #apend方法：在表末尾添加元素
-
-df_data = pd.concat(df_list)
-df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #index=false 表示不输出索引值
+<blockquote>
+<h3 id="3、列级完整性约束和表级完整性约束"><a href="#3、列级完整性约束和表级完整性约束" class="headerlink" title="3、列级完整性约束和表级完整性约束"></a>3、列级完整性约束和表级完整性约束</h3></blockquote>
+<p>列级约束有六种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）、default （默认）、not null/ null（非空/空值 ）<br>表级约束有四种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）</p>
+<p><strong>只能是列级完整性约束</strong>：default （默认）、not null/ null（非空/空值 ）</p>
+<h1 id="第三章：SQL语句"><a href="#第三章：SQL语句" class="headerlink" title="第三章：SQL语句"></a>第三章：SQL语句</h1><blockquote>
+<h3 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h3></blockquote>
+<p><img src="/2021/04/17/DataBase/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B1.png" alt="数据类型1"></p>
+<p><img src="/2021/04/17/DataBase/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B2.png" alt="数据类型2"></p>
+<blockquote>
+<h3 id="2、基本表的定义、修改与删除"><a href="#2、基本表的定义、修改与删除" class="headerlink" title="2、基本表的定义、修改与删除"></a>2、基本表的定义、修改与删除</h3></blockquote>
+<h5 id="基本操作语句"><a href="#基本操作语句" class="headerlink" title="基本操作语句"></a>基本操作语句</h5><h5 id="表的定义"><a href="#表的定义" class="headerlink" title="表的定义"></a>表的定义</h5><pre><code class="line-numbers language-sql">create table student (
+    列名 数据类型 列级完整性约束
+    sno char(9) unique,
+    ssex char(2),
+    primary KEY(sno),
+    foreing key(sno) refferences student(sno)
+);
 </code></pre>
-<h2 id="爬取结果"><a href="#爬取结果" class="headerlink" title="爬取结果"></a>爬取结果</h2><p>在工程文件路径下生成了一个.csv文件（.csv常用于数据分析）</p>
-<p><img src="/2021/04/11/FundSpyder/1.png" alt="1"></p>
-<p>把这支基金从出生到现在的数据都爬完啦，也就不到2000组（为了便于观看，列名已经修改）</p>
-<p><img src="/2021/04/11/FundSpyder/2.png" alt="2"></p>
-<hr>
-<p>  以上就是数据收集的过程，不知道下篇能不能找到合适的机器学习模型建立，希望能找一个既简单拟合度又不是太离谱的模型吧😚😚😚</p>
+<h5 id="表的修改"><a href="#表的修改" class="headerlink" title="表的修改"></a>表的修改</h5><h5 id="表的删除"><a href="#表的删除" class="headerlink" title="表的删除"></a>表的删除</h5><blockquote>
+<h3 id="3、数据查询"><a href="#3、数据查询" class="headerlink" title="3、数据查询"></a>3、数据查询</h3></blockquote>
+<p><strong>数据查询是数据库的<mark>核心操作</mark></strong></p>
 
                 
             </div>
@@ -486,7 +477,7 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://1.15.143.119/2021/04/11/FundSpyder/">http://1.15.143.119/2021/04/11/FundSpyder/</a>
+                    <a href="http://1.15.143.119/2021/04/17/DataBase/">http://1.15.143.119/2021/04/17/DataBase/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -524,12 +515,8 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%88%AC%E8%99%AB/">
-                                    <span class="chip bg-color">爬虫</span>
-                                </a>
-                            
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">数据库，学习笔记</span>
                                 </a>
                             
                         </div>
@@ -1027,9 +1014,10 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/17/DataBase/">
                     <div class="card-image">
@@ -1047,9 +1035,9 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1062,6 +1050,7 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1080,13 +1069,13 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/30/JavaCheck/">
+                <a href="/2021/04/11/FundSpyder/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="关于java实现自动核查作业程序check">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="关于爬虫爬取基金信息">
                         
-                        <span class="card-title">关于java实现自动核查作业程序check</span>
+                        <span class="card-title">关于爬虫爬取基金信息</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1097,14 +1086,14 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java/" class="post-category">
-                                    java
+                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
                                 </a>
                             
                             
@@ -1114,12 +1103,12 @@ df_data.to_csv('易方达医疗保健行业混合 (110023).csv',index=False) #in
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%A6%E5%A7%94%E4%B8%89%E4%BB%B6%E5%A5%97/">
-                        <span class="chip bg-color">学委三件套</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>

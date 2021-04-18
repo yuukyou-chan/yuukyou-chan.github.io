@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据库学习笔记（持续更新4.18）</title>
+      <link href="2021/04/17/DataBase/"/>
+      <url>2021/04/17/DataBase/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><h1 id="第二章：关系型数据库"><a href="#第二章：关系型数据库" class="headerlink" title="第二章：关系型数据库"></a>第二章：关系型数据库</h1><blockquote><h3 id="1、一些概念"><a href="#1、一些概念" class="headerlink" title="1、一些概念"></a>1、一些概念</h3></blockquote><p>关系：实体与实体之间的联系（可以看做一张二维表）、</p><p>候选码：若关系中的一个属性或属性组的值能够唯一地标识一个元组，且他的真子集不能唯一的标识一个元组，则称这个属性或属性组做候选码。</p><p>主码：若一个关系有多个候选码，则选定其中一个为主码</p><p>主属性：候选码的各个属性成为主属性</p><p>全码：表中的所有属性都是这个表的候选码，则称为全码</p><p><strong>外键（外码）</strong>：<mark>如果公共关键字在一个关系中是主键，那么这个公共关键字被称为另一个关系的外键。</mark></p><p>关系三种类型：①基本表（基本关系）②查询表③视图表</p><p>关系模式：关系的描述称为关系模式（即为表头）</p><blockquote><h3 id="2、关系完整性"><a href="#2、关系完整性" class="headerlink" title="2、关系完整性"></a>2、关系完整性</h3></blockquote><ol><li>实体完整性：实体完整性要求每个数据表都必须有主键，而作为主键的所有字段，其属性必须是独一及<strong>非空值</strong>。</li><li>参照完整性：参照的关系中的属性值必须能够在被参照关系找到或者取空值</li><li>用户定义完整性</li></ol><blockquote><h3 id="3、列级完整性约束和表级完整性约束"><a href="#3、列级完整性约束和表级完整性约束" class="headerlink" title="3、列级完整性约束和表级完整性约束"></a>3、列级完整性约束和表级完整性约束</h3></blockquote><p>列级约束有六种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）、default （默认）、not null/ null（非空/空值 ）<br>表级约束有四种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）</p><p><strong>只能是列级完整性约束</strong>：default （默认）、not null/ null（非空/空值 ）</p><h1 id="第三章：SQL语句"><a href="#第三章：SQL语句" class="headerlink" title="第三章：SQL语句"></a>第三章：SQL语句</h1><blockquote><h3 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h3></blockquote><p><img src="/2021/04/17/DataBase/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B1.png" alt="数据类型1"></p><p><img src="/2021/04/17/DataBase/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B2.png" alt="数据类型2"></p><blockquote><h3 id="2、基本表的定义、修改与删除"><a href="#2、基本表的定义、修改与删除" class="headerlink" title="2、基本表的定义、修改与删除"></a>2、基本表的定义、修改与删除</h3></blockquote><h5 id="基本操作语句"><a href="#基本操作语句" class="headerlink" title="基本操作语句"></a>基本操作语句</h5><h5 id="表的定义"><a href="#表的定义" class="headerlink" title="表的定义"></a>表的定义</h5><pre><code class="line-numbers language-sql">create table student (    列名 数据类型 列级完整性约束    sno char(9) unique,    ssex char(2),    primary KEY(sno),    foreing key(sno) refferences student(sno));</code></pre><h5 id="表的修改"><a href="#表的修改" class="headerlink" title="表的修改"></a>表的修改</h5><h5 id="表的删除"><a href="#表的删除" class="headerlink" title="表的删除"></a>表的删除</h5><blockquote><h3 id="3、数据查询"><a href="#3、数据查询" class="headerlink" title="3、数据查询"></a>3、数据查询</h3></blockquote><p><strong>数据查询是数据库的<mark>核心操作</mark></strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库，学习笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于爬虫爬取基金信息</title>
       <link href="2021/04/11/FundSpyder/"/>
       <url>2021/04/11/FundSpyder/</url>
