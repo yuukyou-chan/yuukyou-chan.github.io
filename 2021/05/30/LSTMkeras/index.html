@@ -33,8 +33,8 @@
 	
 	
 	<link rel="stylesheet" href="/js/prism/prism.css">
-<meta name="generator" content="Hexo 5.4.0">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<meta name="generator" content="Hexo 5.4.0"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
 
@@ -421,7 +421,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.5k
                 </div>
                 
 
@@ -448,14 +448,14 @@
 </blockquote>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; 这个月花了将近100G的流量，大半都拿来下学习视频了。上次写了个爬虫把基金数据爬下来了，说是要数据分析一波，头脑热了一个礼拜，每天晚上都在搞神经网络的代码，光是装TensorFlow环境就搞了我3个晚上，到处在网上找代码学习，本来就差最后一步就把要程序跑出来了，结果卡在了反归一化上面，输入输出维度不匹配，又搞了好几天，终于神经网络把我劝退了。我发现这样是行不通的，整得太浮躁了，不懂计算原理直接啃代码，连输入输出是什么都不懂，一些基本的激活函数、归一函数、评价模型都不懂想直接调包也没那么容易，出结果<br></p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp;后来大概过了大半个月，机缘巧合正好需要用到机器学习，我拾起了之前留下的烂摊子，慢慢（假的）基础知识学习，又搞起了机器学习。<br></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; 今天终于能把神经网络跑出来了😁</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 今天终于能把神经网络跑出来了😁好久没更新博客了，主要是最近没啥时间搞自己的东西，作业都写不完</p>
 <blockquote>
 <p>我是调包侠</p>
 </blockquote>
 <p>虽然把神经网络跑出来了，中间还有些小问题，预测效果也不是很好，但是能跑出来</p>
 <p>我就非常开心了，后面会再把基础打扎实一些。<br></p>
 <p>先看效果图：</p>
-<p><img src="/2021/05/30/LSTMkeras/LSTMkeras%5C%E9%A2%84%E6%B5%8B.png" alt="预测"></p>
+<p><img src="/2021/05/30/LSTMkeras/%E9%A2%84%E6%B5%8B.png" alt="预测"></p>
 <p>两条线基本拟合度不是很好，甚至可以说两条线没什么关系，细节波动预测不到，但是大致走势还比较正确（已经调整过很多种方案了，这是还比较像人样的）<br></p>
 <p>看看他的过去：可以说是毫不相干😡<br></p>
 <p>最开始这是纯RNN模型</p>
@@ -463,7 +463,7 @@
 <p>后来我改成了LSTM模型，发现更离谱：（后来我把模型的第一层改成LSTM就得到了图一）</p>
 <p><img src="/2021/05/30/LSTMkeras/LSTM.png"></p>
 <p>大概可以看出加入LSTM模型，预测值将会变得更趋于平缓，我猜可能是因为LSTM模型对长期记忆性导致的<br></p>
-<p>其中存在的问题是每次Epoch的val_loss值都是不变，而且loss值为什么都是nan，我去看了网上说是每次训练出来的权重不变（或者说没有更新），或者是模型错误造成的，俺不懂怎么办了，百思不得其解，有没有懂得大佬指点一下，感激涕零😭<img src="/2021/05/30/LSTMkeras/codeStudy\blog\source_posts\LSTMkeras\损失值.png" alt="损失值"></p>
+<p>其中存在的问题是每次Epoch的val_loss值都是不变，而且loss值为什么都是nan，我去看了网上说是每次训练出来的权重不变（或者说没有更新），或者是模型错误造成的，俺不懂怎么办了，百思不得其解，有没有懂得大佬指点一下，感激涕零😭<img src="/2021/05/30/LSTMkeras/%E6%8D%9F%E5%A4%B1%E5%80%BC.png" alt="损失值"></p>
 <p>下面康康学习过程：</p>
 <p>好多包，我好爱</p>
 <pre><code class="line-numbers language-python">import numpy as np
@@ -1520,7 +1520,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.8k</span>&nbsp;字
+                class="white-color">8.9k</span>&nbsp;字
             
             
             
