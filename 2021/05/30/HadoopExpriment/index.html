@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习入门笔记, Yuukyou&#39;s blog">
+    <meta name="keywords" content="HadoopExpriment, Yuukyou&#39;s blog">
     <meta name="description" content="无语也浪漫">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习入门笔记 | Yuukyou&#39;s blog</title>
+    <title>HadoopExpriment | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -253,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习入门笔记</h1>
+                    <h1 class="description center-align post-title">HadoopExpriment</h1>
                 </div>
             </div>
         </div>
@@ -372,33 +372,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
-                                <span class="chip bg-color">数据挖掘</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/python/" class="post-category">
-                                python
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -407,7 +386,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-21
+                    2021-05-30
                 </div>
                 
 
@@ -421,7 +400,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    833
+                    2.2k
                 </div>
                 
 
@@ -443,90 +422,157 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、数据处理"><a href="#一、数据处理" class="headerlink" title="一、数据处理"></a>一、数据处理</h1><h2 id="缺失值判断："><a href="#缺失值判断：" class="headerlink" title="缺失值判断："></a>缺失值判断：</h2><ol>
-<li><p><code>pd.isnull(movie)</code> 如果是缺失值返回true；</p>
-<p>返回结果是一张表，表里填满 true和false；</p>
-</li>
-<li><p>判断整张表是否有缺失值：</p>
-<p><code>np.any(pd.isnull(movie))</code></p>
-<p>反三：any-all      isnull-notnull</p>
-<p>返回结果为一个值：true/false</p>
-</li>
-</ol>
-<h2 id="缺失值删除和替换"><a href="#缺失值删除和替换" class="headerlink" title="缺失值删除和替换"></a>缺失值删除和替换</h2><ol>
-<li><p><code>movie(“列变量名”).fillna(value=movie["列变量名"].mean(), inplace=True)</code>  </p>
-<p>替换变量函数：fillna( )</p>
-<p>.mean()：用该列平均值替换NaN值</p>
-<p>inplace=Ture:   不创建新的对象，直接对原始对象进行修改；</p>
-<p>inplace=False：对数据进行修改，创建并返回新的对象承载其修改结果。</p>
-</li>
-<li><p>替换所有缺失值：</p>
-<pre><code class="line-numbers language-python">for i in movie.columns：    #遍历列
-  if np.any(pd.isnull(movie[i])) == True:  #如果此列有NaN值
-        movie[i].fillna(value=movie[i].mean(), inplace=True)
-np.any(pd.isnull(movie))  #检测是否替换完成
-</code></pre>
-</li>
-<li><p>删除缺失值（整张表中）</p>
-<p><code>data = movie.dropna()</code></p>
-</li>
-<li><p>缺失值不是NaN的处理情况</p>
-<p>如将 “？”替换成np.nan</p>
-<p><code>wis = wis.replace(to_replace='?',value=np.NaN)</code></p>
-</li>
-</ol>
-<h2 id="数据离散化"><a href="#数据离散化" class="headerlink" title="数据离散化"></a>数据离散化</h2><p><code>pd.qcut(data,q)</code></p>
-<h2 id="数据合并"><a href="#数据合并" class="headerlink" title="数据合并"></a>数据合并</h2><p><code>pd.concat({data, data_dummies}, axis=1)</code> axis参数表作用方向：此句中的axis=1表示两张表按行(水平方向)拼接</p>
-<p><code>pd.merge(left, right, how="inner", left_on=None,right_on=None)</code></p>
-<h2 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h2><p>seaborn库介绍</p>
-<ul>
-<li>seaborn.implot() 可以再绘制二维散点图时自动完成回归拟合</li>
-<li>data=  ：关联数据集</li>
-<li>hue=“</li>
-</ul>
-<p>matplotlin库介绍</p>
-<p>绘制柱状图：</p>
-<p><img src="/2021/05/21/ML/ML%5C%E6%9F%B1%E7%8A%B6%E5%9B%BE.png" alt="image-20210523160542346"></p>
-<h2 id="数据归一化"><a href="#数据归一化" class="headerlink" title="数据归一化"></a>数据归一化</h2><pre><code class="line-numbers language-python">from sklearn.preprocessing import MinMaxScaler
-</code></pre>
-<p><img src="/2021/05/21/ML/ML%5C%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96.png" alt="image-20210528115638416"></p>
-<p><img src="/2021/05/21/ML/ML%5C%E5%BD%92%E4%B8%80%E5%8C%96%E5%AE%9E%E4%BE%8B.png" alt="image-20210528131156366"></p>
-<h2 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h2><p><img src="/2021/05/21/ML/ML%5C%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E5%8C%96API.png" alt="image-20210528131816039"></p>
-<p>实例：修改归一化实例图中的<code>transfer = StandardScaler</code> 即可</p>
-<h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><p>API：<code>sklearn.linear_model.LinearRegression()</code></p>
-<p>属性：LinearRegression.coef_：回归系数</p>
-<p><img src="/2021/05/21/ML/ML%5C%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" alt="image-20210523163608946"></p>
-<p>优化算法:</p>
-<ul>
-<li>正规方程(直接矩阵运算求w权重,如果特征多求解速度慢,只能在线性回归总运用),</li>
-<li>梯度下降(沿着切线向下的方向，递归迭代计算权重,广泛使用)：找到当误差最小时，最优自变量|权重|参数</li>
-<li>性能评估：使用均方误差；<br>适用场景：</li>
-<li>小规模数据建议LinearRegression(不能解决过拟合问题)和岭回归；</li>
-<li>大规模用SGDRegressor：随机梯度下降</li>
-</ul>
-<h3 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h3><p>目的：求出当误差最小时，最优自变量|权重|参数</p>
-<p><code>sklearn.linear_model.SGDRegression()</code></p>
-<ul>
-<li>包：from sklearn.linear_model import SGDRegressor</li>
-<li>支持loss函数(损失类型),和正则化惩罚项来拟合线性回归模型</li>
-<li>loss=‘squared_loss’:默认普通最小二乘法</li>
-<li>可以用网络搜索算法来优化学习率和梯度迭代次数</li>
-<li>fit_intercept=True :是否计算偏置</li>
-<li>learning_rate=‘invscaling’:学习率</li>
-<li>‘invscaling’：学习率算法 包含 “comstant”,“optimal”,‘invscaling’,</li>
-</ul>
-<p>对于常数值的学习率可以使用<strong>“comstant”</strong>==0</p>
-<p>max_iter=None,梯度迭代次数<br>SGDRegressor.coef_:查看回归系数函数</p>
-<p><img src="/2021/05/21/ML/ML%5Cimage-20210528133121562.png" alt="image-20210528133121562"></p>
-<p><img src="/2021/05/21/ML/ML%5C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%B8%B8%E7%94%A8%E5%B8%B8%E6%95%B0.png" alt="image-20210528133745820"></p>
-<p><code>learning_rate = "constant" </code>指学习率为常数，但是一般常数学习率效果不好，需要使用动态变化的学习率（invscaling）</p>
-<p>eta0：<strong>一般取值 0.01 ~ 0.001 为宜</strong></p>
-<h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>思想：输入最原始、最基本的数据，通过模型来进行特征工程，进行更高级的特征学习（多个特征值聚合成一个特征值），然后通过传入的数据来确定合适的参数，让模型更好的拟合数据。</p>
-<p>激活函数：</p>
-<ul>
-<li>作用：增加模型的非线性分割能力，提供鲁棒性（健壮性），缓解梯度消失，加速模型收敛</li>
-<li>常用sigmoid：（0-1）、tanh</li>
-</ul>
+                <h2 id="实验三"><a href="#实验三" class="headerlink" title="实验三"></a>实验三</h2><p>七、实验步骤</p>
+<p>（一）Hbase shell 命令</p>
+<p>1.启动hadoop</p>
+<p>cd /usr/local/hadoop</p>
+<p>./sbin/start-all.sh</p>
+<p>2.启动hbase和hbase shell</p>
+<p>cd /usr/local/hbase</p>
+<p>./bin/start-hbase.sh</p>
+<p>./bin/hbase shell</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps14.jpg" alt="img"> </p>
+<p>l 进入HBase Shell命令行模式以后，用户可以通过输入Shell命令操作HBase数据库。</p>
+<p>\3. 用list命令查看当前HBase数据库中已经创建了哪些表</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps15.jpg" alt="img"> </p>
+<p>\4. 若已存在student表，则删除</p>
+<p>disable ‘student’</p>
+<p>drop ‘student’</p>
+<p>\5. 用create命令创建表</p>
+<p>create ‘student’,’Sname’,’Ssex’,’Sage’,’Sdept’,’course’</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps16.jpg" alt="img"> </p>
+<p>\6. 查看数据</p>
+<p>l HBase中有两个用于查看数据的命令：1. get命令，用于查看表的某一行数据；2. scan命令用于查看某个表的全部数据</p>
+<p>get ‘student’,’20202020’</p>
+<p>scan ‘student’</p>
+<p>\7. 用put命令将自己的姓名、学号添加到student表中。例如姓名为‘Zhangsan’，学号‘20202020’:</p>
+<p>put ‘student’,’20202020’,’Sname’,’Zhangsan’</p>
+<p>l 即为student表添加了学号为20202020，名字为Zhangsan的一行数据，其行键为20202020</p>
+<p>put ‘student’,’20202020’,’course:math’,’80’</p>
+<p>l 即为20202020行下的course列族的math列添加了一个数据。</p>
+<p>\8. 在HBase中用delete以及deleteall命令进行删除数据操作，它们的区别是：1. delete用于删除一个数据，是put的反向操作；2. deleteall操作用于删除一行数据。</p>
+<p>delete ‘student’,’20202020’,’Ssex’</p>
+<p>l 删除了student表中20202020行下的Ssex列的所有数据。</p>
+<p>get ‘student’，‘20202020’</p>
+<p>l 查看是否删除成功</p>
+<p>deleteall ‘student’,’20202020’</p>
+<p>l 删除了student表中的95001行的全部数据。</p>
+<p>\8. 查询表历史数据</p>
+<p>1）在创建表的时候，指定保存的版本数（假设指定为5）</p>
+<p>create ‘teacher’,{NAME=&gt;’username’,VERSIONS=&gt;5}</p>
+<p>2）插入数据然后更新数据，使其产生历史版本数据，注意：这里插入数据和更新数据都是用put命令</p>
+<p>put ‘teacher’,’91001’,’username’,’Mary’</p>
+<p>put ‘teacher’,’91001’,’username’,’Mary1’</p>
+<p>put ‘teacher’,’91001’,’username’,’Mary2’</p>
+<p>put ‘teacher’,’91001’,’username’,’Mary3’</p>
+<p>put ‘teacher’,’91001’,’username’,’Mary4’  </p>
+<p>put ‘teacher’,’91001’,’username’,’Mary5’</p>
+<p>3）查询时，指定查询的历史版本数。默认会查询出最新的数据。（有效取值为1到5）</p>
+<p>get ‘teacher’,’91001’,{COLUMN=&gt;’username’,VERSIONS=&gt;5}</p>
+<p>\9. 退出HBase数据库表操作</p>
+<p>exit</p>
+<p>l 注意：这里退出HBase数据库是退出对数据库表的操作，而不是停止启动HBase数据库后台运行。</p>
+<p>\10. 停止HBase运行</p>
+<p>bin/stop-hbase.sh</p>
+<p>11.关闭Hadoop</p>
+<p>./sbin/stop-all.sh  </p>
+<p>（二）Java API编程实例</p>
+<p>\1. 启动hadoop，启动hbase(运行java代码时一定要保证hbase是启动状态)</p>
+<p>cd /usr/local/hadoop</p>
+<p>./sbin/start-all.sh</p>
+<p>cd /usr/local/hbase</p>
+<p>./bin/start-hbase.sh</p>
+<p>2.在Eclipse中新建Java Project（Project名字为你名字的拼音，注意下图框起来部分）——&gt;新建Class</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps17.png" alt="img"><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps18.jpg" alt="img"> </p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps19.jpg" alt="img"> </p>
+<p>\3. 在工程中导入外部jar包</p>
+<p>l 在项目名称上右键选Property，在弹出的对话框左侧列表中选择Java Build Path，如下图所示：选择Add External JARs</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps20.png" alt="img"><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps21.jpg" alt="img"> </p>
+<p>l 导入hbase安装目录中的lib（usr/local/hbase/lib,注意目录不要选错）文件中的所有jar包</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps22.jpg" alt="img"> </p>
+<p>4.编写代码并运行</p>
+<p>l 在Linux系统中打开浏览器，输入网址<a target="_blank" rel="noopener" href="http://dblab.xmu.edu.cn/blog/install-hbase/%E5%A4%8D%E5%88%B6%E4%BB%A3%E7%A0%81%E3%80%82">http://dblab.xmu.edu.cn/blog/install-hbase/复制代码。</a></p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps23.jpg" alt="img"> </p>
+<p>l 复制完成后，编译运行，Run as Java Application。运行成功后如图</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps24.jpg" alt="img"> </p>
+<p>\5. 进入Hbase shell</p>
+<p>scan ‘Score’ </p>
+<p>\6. 在Eclipse中执行其它语句（除了createTable语句外，每人任选两条以上语句执行，每次执行一条，在Eclipse执行完后在shell中查看结果。）</p>
+<p>l 主函数中的语句请任选两条执行，只需删除其前的//，并将其它语句注释掉即可，如：执行insertRow时请将其他语句注释</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps25.jpg" alt="img"> </p>
+<p>l 执行完成后在shell中查看结果</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps26.jpg" alt="img"> </p>
+<p>7.关闭hbase和hadoop</p>
+<p>bin/stop-hbase.sh</p>
+<p>./sbin/stop-all.sh  </p>
+<h2 id="实验四"><a href="#实验四" class="headerlink" title="实验四"></a>实验四</h2><p>七、实验步骤</p>
+<p>（一）安装 Hadoop-Eclipse-Plugin</p>
+<p>进入本地文件系统的“下载”文件夹，单击右键，点在终端打开。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps45.jpg" alt="img"> </p>
+<p>l 在终端中输入命令(或者直接在文件系统中将该jar包拷贝到/usr/local/eclipse/plugins/中)</p>
+<p>sudo cp hadoop-eclipse-plugin-2.6.0.jar /usr/local/eclipse/plugins/</p>
+<p>l 复制完成后 使用以下命令，查看该jar包是否复制成功。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps46.jpg" alt="img"> </p>
+<p>l 在shell中运行以下命令重启 Eclipse </p>
+<p>/usr/lib/eclipse/eclipse -clean</p>
+<p>（二）在hadoop的HDFS文件系统中新建输入文件夹</p>
+<p>1.启动hadoop</p>
+<p>cd /usr/local/hadoop</p>
+<p>./sbin/start-all.sh</p>
+<p>2.在HDFS中创建用户目录</p>
+<p>l 本实验环境的Hadoop为伪分布式，伪分布式读取的则是 HDFS 上的数据。要使用 HDFS，首先需要创建用户目录。（已存在该文件夹则跳过这步）</p>
+<p>bin/hdfs dfs -mkdir -p /user/hadoop</p>
+<p>l 接着将 etc/hadoop 中的文件作为输入文件复制到分布式文件系统中，即将 /usr/local/hadoop/etc/hadoop 复制到分布式文件系统中的 /user/hadoop/input 中。上一步已创建了用户目录 /user/hadoop ，因此命令中就可以使用相对目录如 input，其对应的绝对路径就是 /user/hadoop/input:</p>
+<p>bin/hdfs dfs -put etc/hadoop/*.xml input</p>
+<p>l 查看input中的文件</p>
+<p>bin/hdfs dfs –ls /user/hadoop/input</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps47.jpg" alt="img"> </p>
+<p>l 程序统计的就是这些文件中的词频。</p>
+<p>l 也可以自己创建文件拷贝到hdfs中进行统计。</p>
+<p>（三） 配置 Hadoop-Eclipse-Plugin</p>
+<p>1.启动Eclipse</p>
+<p>l 启动 Eclipse 后就可以在左侧的Project Explorer中看到 DFS Locations</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps48.jpg" alt="img"> </p>
+<p>\2. 进一步配置插件</p>
+<p>l 第一步，选择 Window 菜单下的 Preference。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps49.jpg" alt="img"> </p>
+<p>l 此时会弹出一个窗体，窗体的左侧会多出 Hadoop Map/Reduce 选项，点击此选项，选择 Hadoop 的安装目录（如/usr/local/hadoop，Ubuntu不好选择目录，直接输入就行）。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps50.jpg" alt="img"> </p>
+<p>l 第二步：切换 Map/Reduce 开发视图，选择 Window 菜单下选择 Open Perspective -&gt; Other，弹出一个窗体，从中选择 Map/Reduce 选项即可进行切换。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps51.jpg" alt="img"> </p>
+<p>l 第三步：建立与 Hadoop 集群的连接，点击 Eclipse软件右下角的 Map/Reduce Locations 面板，在面板中单击右键，选择 New Hadoop Location。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps52.png" alt="img"><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps53.jpg" alt="img"> </p>
+<p>l 在弹出来的 General 选项面板中，General 的设置要与 Hadoop 的配置一致。一般两个 Host 值是一样的，如果是伪分布式，填写 localhost 即可，另外我们使用的<a target="_blank" rel="noopener" href="http://dblab.xmu.edu.cn/blog/install-hadoop/">Hadoop伪分布式配置</a>，设置 fs.defaultFS 为 hdfs://localhost:9000，则 DFS Master 的 Port 要改为 9000。Map/Reduce(V2) Master 的 Port 用默认的即可，Location Name 随意填写。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps54.jpg" alt="img"> </p>
+<p>（四）在 Eclipse 中操作 HDFS 中的文件</p>
+<p>l 配置好后，点击左侧 Project Explorer 中的 MapReduce Location （点击三角形展开）就能直接查看 HDFS 中的文件列表了，双击可以查看内容，右键点击可以上传、下载、删除 HDFS 中的文件，无需再通过繁琐的 hdfs dfs -ls 等命令进行操作了。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps55.jpg" alt="img"> </p>
+<p>（五）在 Eclipse 中创建 MapReduce 项目</p>
+<p>l 点击 File 菜单，选择 New -&gt; Project…选择 Map/Reduce Project，点击 Next。</p>
+<p>l 填写 Project name 为 WordCount 即可，点击 Finish 就创建好了项目。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps56.jpg" alt="img"> </p>
+<p>l 右键点击刚创建的 WordCount 项目，选择 New -&gt; Class</p>
+<p>l 需要填写两个地方：在 Package 处填写 org.apache.hadoop.examples；在 Name 处填写 WordCount。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps57.jpg" alt="img"> </p>
+<p>l 创建 Class 完成后，在 Project 的 src 中就能看到 WordCount.java 这个文件。将如下 WordCount 的代码复制到该文件中。</p>
+<p>l 用linux浏览器打开网址复制WordCount代码<a target="_blank" rel="noopener" href="http://dblab.xmu.edu.cn/blog/hadoop-build-project-using-eclipse/">http://dblab.xmu.edu.cn/blog/hadoop-build-project-using-eclipse/</a></p>
+<p>（六）通过 Eclipse 运行 MapReduce</p>
+<p>l 在运行 MapReduce 程序前，还需要将 /usr/local/hadoop/etc/hadoop 中将有修改过的配置文件（如伪分布式需要修改 core-site.xml 和 hdfs-site.xml，本镜像已完成修改），以及 log4j.properties 复制到 WordCount 项目下的 src 文件夹（~/workspace/WordCount/src）中。在shell中完成复制。</p>
+<p>cp /usr/local/hadoop/etc/hadoop/core-site.xml ~/workspace/WordCount/src</p>
+<p>cp /usr/local/hadoop/etc/hadoop/hdfs-site.xml ~/workspace/WordCount/src</p>
+<p>cp /usr/local/hadoop/etc/hadoop/log4j.properties ~/workspace/WordCount/src</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps58.jpg" alt="img"> </p>
+<p>l 复制完成后，务必右键点击 WordCount 选择 refresh 进行刷新（不会自动刷新，需要手动刷新），可以看到文件结构如下所示：</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps59.jpg" alt="img"> </p>
+<p>l 点击工具栏中的 Run 图标，或者右键点击 Project Explorer 中的 WordCount.java，选择 Run As -&gt; Run on Hadoop，就可以运行 MapReduce 程序了。不过由于没有指定参数，运行时会提示 “Usage: wordcount “，需要通过Eclipse设定一下运行参数。</p>
+<p>l 右键点击刚创建的 WordCount.java，选择 Run As -&gt; Run Configurations，在此处可以设置运行时的相关参数（如果 Java Application 下面没有 WordCount，那么需要先双击 Java Application）。切换到 “Arguments” 栏，在 Program arguments 处填写 “input output” 就可以了。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps60.jpg" alt="img"> </p>
+<p>l 设定参数后，再次运行程序，可以看到运行成功的提示。</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps61.jpg" alt="img"> </p>
+<p>l 可以在Shell中查看结果：</p>
+<p>./bin/hdfs dfs –cat output/*</p>
+<p><img src="file:///C:\Users\19681\AppData\Local\Temp\ksohtml5852\wps62.jpg" alt="img"> </p>
+<p>l 提示：如果提示错误“-Syntax error, parameterized types are only availble if source level is 1.5 or greater”。单击错误提示图标，在弹出的对话框中，在Change project compliance and JRE to 1.5 这行文字上双击，就可以让错误信息消失。</p>
 
                 
             </div>
@@ -553,7 +599,7 @@ np.any(pd.isnull(movie))  #检测是否替换完成
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://1.15.143.119/2021/05/21/ML/">http://1.15.143.119/2021/05/21/ML/</a>
+                    <a href="http://1.15.143.119/2021/05/30/HadoopExpriment/">http://1.15.143.119/2021/05/30/HadoopExpriment/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -590,19 +636,7 @@ np.any(pd.isnull(movie))  #检测是否替换完成
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
-                                    <span class="chip bg-color">数据挖掘</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1098,9 +1132,48 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/05/30/HadoopExpriment/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="HadoopExpriment">
+                        
+                        <span class="card-title">HadoopExpriment</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/05/30/LSTMkeras/">
                     <div class="card-image">
@@ -1118,9 +1191,9 @@ np.any(pd.isnull(movie))  #检测是否替换完成
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1146,55 +1219,6 @@ np.any(pd.isnull(movie))  #检测是否替换完成
                     
                     <a href="/tags/RNN/">
                         <span class="chip bg-color">RNN</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/04/17/DataBase/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="数据库学习笔记（持续更新4.18）">
-                        
-                        <span class="card-title">数据库学习笔记（持续更新4.18）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">数据库，学习笔记</span>
                     </a>
                     
                 </div>
