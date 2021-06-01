@@ -469,16 +469,16 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 </ul>
 <p>matplotlin库介绍</p>
 <p>绘制柱状图：</p>
-<p><img src="/2021/05/21/ML/.%5CML%5C%E6%9F%B1%E7%8A%B6%E5%9B%BE.png" alt="柱状图"></p>
+<p><img src="/2021/05/21/ML/%E6%9F%B1%E7%8A%B6%E5%9B%BE.png" alt="柱状图"></p>
 <h2 id="数据归一化"><a href="#数据归一化" class="headerlink" title="数据归一化"></a>数据归一化</h2><pre><code class="line-numbers language-python">from sklearn.preprocessing import MinMaxScaler
 </code></pre>
-<p><img src="/2021/05/21/ML/.%5CML%5C%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96.png" alt="数据归一化"></p>
-<p><img src="/2021/05/21/ML/.%5CML%5C%E5%BD%92%E4%B8%80%E5%8C%96%E5%AE%9E%E4%BE%8B.png" alt="归一化实力"></p>
-<h2 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h2><p><img src="/2021/05/21/ML/.%5CML%5C%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E5%8C%96API.png" alt="数据标准化AIP"></p>
+<p><img src="/2021/05/21/ML/%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96.png" alt="数据归一化"></p>
+<p><img src="/2021/05/21/ML/%E5%BD%92%E4%B8%80%E5%8C%96%E5%AE%9E%E4%BE%8B.png" alt="归一化实力"></p>
+<h2 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h2><p><img src="/2021/05/21/ML/%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E5%8C%96API.png" alt="数据标准化AIP"></p>
 <p>实例：修改归一化实例图中的<code>transfer = StandardScaler</code> 即可</p>
 <h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><p>API：<code>sklearn.linear_model.LinearRegression()</code></p>
 <p>属性：LinearRegression.coef_：回归系数</p>
-<p><img src="/2021/05/21/ML/.%5CML%5C%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" alt="线性回归"></p>
+<p><img src="/2021/05/21/ML/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" alt="线性回归"></p>
 <p>优化算法:</p>
 <ul>
 <li>正规方程(直接矩阵运算求w权重,如果特征多求解速度慢,只能在线性回归总运用),</li>
@@ -500,8 +500,8 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 </ul>
 <p>对于常数值的学习率可以使用<strong>“comstant”</strong>==0</p>
 <p>max_iter=None,梯度迭代次数<br>SGDRegressor.coef_:查看回归系数函数</p>
-<p><img src="/2021/05/21/ML/.%5CML%5Cimage-20210528133121562.png" alt="数据处理"></p>
-<p><img src="/2021/05/21/ML/.%5CML%5C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%B8%B8%E7%94%A8%E5%B8%B8%E6%95%B0.png" alt="梯度下降常用常数"></p>
+<p><img src="/2021/05/21/ML/image-20210528133121562.png" alt="数据处理"></p>
+<p><img src="/2021/05/21/ML/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%B8%B8%E7%94%A8%E5%B8%B8%E6%95%B0.png" alt="梯度下降常用常数"></p>
 <p><code>learning_rate = "constant" </code>指学习率为常数，但是一般常数学习率效果不好，需要使用动态变化的学习率（invscaling）</p>
 <p>eta0：<strong>一般取值 0.01 ~ 0.001 为宜</strong></p>
 <h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>思想：输入最原始、最基本的数据，通过模型来进行特征工程，进行更高级的特征学习（多个特征值聚合成一个特征值），然后通过传入的数据来确定合适的参数，让模型更好的拟合数据。</p>
