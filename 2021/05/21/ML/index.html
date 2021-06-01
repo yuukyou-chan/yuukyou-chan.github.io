@@ -123,17 +123,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/todolist" class="waves-effect waves-light">
-      
-      <i class="fas" style="zoom: 0.6;"></i>
-      
-      <span>记事本</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -222,17 +211,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/todolist" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas"></i>
-			
-			记事本
 		</a>
           
         </li>
@@ -414,7 +392,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-30
+                    2021-06-01
                 </div>
                 
 
@@ -439,6 +417,11 @@
 
         
 
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
         
 
         <div class="card-content article-card-content">
@@ -486,16 +469,16 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 </ul>
 <p>matplotlin库介绍</p>
 <p>绘制柱状图：</p>
-<p><img src="/2021/05/21/ML/ML%5C%E6%9F%B1%E7%8A%B6%E5%9B%BE.png" alt="image-20210523160542346"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5C%E6%9F%B1%E7%8A%B6%E5%9B%BE.png" alt="image-20210523160542346"></p>
 <h2 id="数据归一化"><a href="#数据归一化" class="headerlink" title="数据归一化"></a>数据归一化</h2><pre><code class="line-numbers language-python">from sklearn.preprocessing import MinMaxScaler
 </code></pre>
-<p><img src="/2021/05/21/ML/ML%5C%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96.png" alt="image-20210528115638416"></p>
-<p><img src="/2021/05/21/ML/ML%5C%E5%BD%92%E4%B8%80%E5%8C%96%E5%AE%9E%E4%BE%8B.png" alt="image-20210528131156366"></p>
-<h2 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h2><p><img src="/2021/05/21/ML/ML%5C%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E5%8C%96API.png" alt="image-20210528131816039"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5C%E6%95%B0%E6%8D%AE%E5%BD%92%E4%B8%80%E5%8C%96.png" alt="image-20210528115638416"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5C%E5%BD%92%E4%B8%80%E5%8C%96%E5%AE%9E%E4%BE%8B.png" alt="image-20210528131156366"></p>
+<h2 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h2><p><img src="/2021/05/21/ML/.%5CML%5C%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E5%8C%96API.png" alt="image-20210528131816039"></p>
 <p>实例：修改归一化实例图中的<code>transfer = StandardScaler</code> 即可</p>
 <h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><p>API：<code>sklearn.linear_model.LinearRegression()</code></p>
 <p>属性：LinearRegression.coef_：回归系数</p>
-<p><img src="/2021/05/21/ML/ML%5C%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" alt="image-20210523163608946"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5C%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.png" alt="image-20210523163608946"></p>
 <p>优化算法:</p>
 <ul>
 <li>正规方程(直接矩阵运算求w权重,如果特征多求解速度慢,只能在线性回归总运用),</li>
@@ -517,8 +500,8 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 </ul>
 <p>对于常数值的学习率可以使用<strong>“comstant”</strong>==0</p>
 <p>max_iter=None,梯度迭代次数<br>SGDRegressor.coef_:查看回归系数函数</p>
-<p><img src="/2021/05/21/ML/ML%5Cimage-20210528133121562.png" alt="image-20210528133121562"></p>
-<p><img src="/2021/05/21/ML/ML%5C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%B8%B8%E7%94%A8%E5%B8%B8%E6%95%B0.png" alt="image-20210528133745820"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5Cimage-20210528133121562.png" alt="image-20210528133121562"></p>
+<p><img src="/2021/05/21/ML/.%5CML%5C%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%B8%B8%E7%94%A8%E5%B8%B8%E6%95%B0.png" alt="image-20210528133745820"></p>
 <p><code>learning_rate = "constant" </code>指学习率为常数，但是一般常数学习率效果不好，需要使用动态变化的学习率（invscaling）</p>
 <p>eta0：<strong>一般取值 0.01 ~ 0.001 为宜</strong></p>
 <h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>思想：输入最原始、最基本的数据，通过模型来进行特征工程，进行更高级的特征学习（多个特征值聚合成一个特征值），然后通过传入的数据来确定合适的参数，让模型更好的拟合数据。</p>
@@ -722,7 +705,7 @@ np.any(pd.isnull(movie))  #检测是否替换完成
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">如果觉得还不错的话，可不可以给博主买一片西瓜🍉 😋</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -1215,7 +1198,7 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 
         var selection = window.getSelection();
         // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
+        if (('' + selection).length < Number.parseInt('100')) {
             return;
         }
 
@@ -1283,10 +1266,6 @@ np.any(pd.isnull(movie))  #检测是否替换完成
 
 
 <!-- 代码块折行 -->
-
-<style type="text/css">
-code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
-</style>
 
 
     </div>
@@ -1543,6 +1522,10 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </a>
 
 
+
+    <a href="https://weibo.com/u/6911080739" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6911080739" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
 
 
 

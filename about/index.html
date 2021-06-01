@@ -123,17 +123,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/todolist" class="waves-effect waves-light">
-      
-      <i class="fas" style="zoom: 0.6;"></i>
-      
-      <span>记事本</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -222,17 +211,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/todolist" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas"></i>
-			
-			记事本
 		</a>
           
         </li>
@@ -389,6 +367,10 @@
 
 
 
+    <a href="https://weibo.com/u/6911080739" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6911080739" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
 
 
 
@@ -426,6 +408,10 @@
     </a>
 
 
+
+    <a href="https://weibo.com/u/6911080739" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6911080739" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
 
 
 
@@ -491,7 +477,7 @@
         },
         xAxis: {
             type: 'category',
-            data: ["2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05"]
+            data: ["2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06"]
         },
         yAxis: {
             type: 'value',
@@ -501,7 +487,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,5,2,3],
+                data: [0,0,0,0,0,0,0,0,0,5,2,3,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -543,7 +529,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"学习笔记","value":1},{"name":"爬虫","value":1},{"name":"code","value":1},{"name":"嵌入式开发","value":1},{"name":"前端","value":1},{"name":"java","value":1},{"name":"机器学习","value":1},{"name":"python","value":1},{"name":"随笔","value":1}],
+                data: [{"name":"爬虫","value":1},{"name":"学习笔记","value":1},{"name":"code","value":1},{"name":"java","value":1},{"name":"嵌入式开发","value":1},{"name":"前端","value":1},{"name":"机器学习","value":1},{"name":"python","value":1},{"name":"随笔","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -567,7 +553,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["python","数据库，学习笔记","爬虫","git&hexo","IAR","STM32","电脑鼠","Json","Ajax","前端"]
+                data: ["python","爬虫","数据库，学习笔记","git&hexo","java","学委三件套","IAR","STM32","电脑鼠","Json"]
             }
         ],
         yAxis: [
@@ -698,12 +684,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                <span class="chip center-align waves-effect waves-light chip-default">数据库，学习笔记</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E7%88%AC%E8%99%AB/">
                 <span class="chip center-align waves-effect waves-light chip-default">爬虫</span>
             </a>
@@ -712,8 +692,26 @@
             
             
             
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                <span class="chip center-align waves-effect waves-light chip-default">数据库，学习笔记</span>
+            </a>
+            
+            
+            
             <a href="/tags/git-hexo/">
                 <span class="chip center-align waves-effect waves-light chip-default">git&hexo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/java/">
+                <span class="chip center-align waves-effect waves-light chip-default">java</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%AD%A6%E5%A7%94%E4%B8%89%E4%BB%B6%E5%A5%97/">
+                <span class="chip center-align waves-effect waves-light chip-default">学委三件套</span>
             </a>
             
             
@@ -750,18 +748,6 @@
             
             <a href="/tags/%E5%89%8D%E7%AB%AF/">
                 <span class="chip center-align waves-effect waves-light chip-default">前端</span>
-            </a>
-            
-            
-            
-            <a href="/tags/java/">
-                <span class="chip center-align waves-effect waves-light chip-default">java</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%AD%A6%E5%A7%94%E4%B8%89%E4%BB%B6%E5%A5%97/">
-                <span class="chip center-align waves-effect waves-light chip-default">学委三件套</span>
             </a>
             
             
@@ -981,6 +967,10 @@
     </a>
 
 
+
+    <a href="https://weibo.com/u/6911080739" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6911080739" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
 
 
 
