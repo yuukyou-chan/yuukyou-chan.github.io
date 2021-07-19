@@ -378,14 +378,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-18
+                    2021-07-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.4k
                 </div>
                 
 
@@ -443,6 +443,10 @@
 </li>
 <li><blockquote>
 <h5 id="W3C盒模型和怪异盒模型（🌟🌟🌟）"><a href="#W3C盒模型和怪异盒模型（🌟🌟🌟）" class="headerlink" title="W3C盒模型和怪异盒模型（🌟🌟🌟）"></a>W3C盒模型和怪异盒模型（🌟🌟🌟）</h5></blockquote>
+<p><img src="/2021/07/17/front-end-interview/%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B.png" alt="标准盒模型"></p>
+<p>​    在标准盒模型下，width和height是内容区域即content的width和height。而盒子总宽度为</p>
+<p>​    在标准模式下，一个块的总宽度= width + margin(左右) + padding(左右) + border(左右)</p>
+<p><img src="/2021/07/17/front-end-interview/IE%E6%88%96%E6%80%AA%E5%BC%82%E7%9B%92%E6%A8%A1%E5%9E%8B.png" alt="怪异盒模型">IE盒模型或怪异盒模型显而易见的区别就是，width和height除了content区域外，还包含padding和border。盒子的总宽度为 一个块的总宽度= width + margin(左右)（即width已经包含了padding和border值）</p>
 </li>
 <li><blockquote>
 <h5 id="水平垂直居中的方法（还有只水平居中、只垂直居中）（🌟🌟🌟）"><a href="#水平垂直居中的方法（还有只水平居中、只垂直居中）（🌟🌟🌟）" class="headerlink" title="水平垂直居中的方法（还有只水平居中、只垂直居中）（🌟🌟🌟）"></a>水平垂直居中的方法（还有只水平居中、只垂直居中）（🌟🌟🌟）</h5></blockquote>
@@ -450,13 +454,32 @@
 <li><blockquote>
 <h5 id="BFC（🌟🌟🌟）"><a href="#BFC（🌟🌟🌟）" class="headerlink" title="BFC（🌟🌟🌟）"></a>BFC（🌟🌟🌟）</h5></blockquote>
 <ul>
-<li>BFC是什么</li>
-<li>触发条件</li>
-<li>特性及作用</li>
+<li><p>BFC是什么</p>
+<p>BFC(Block formatting context)直译为”块级格式化上下文”</p>
+</li>
+<li><p>触发条件</p>
+<p>1、float的值不是none。</p>
+<p>2、position的值不是static或者relative。</p>
+<p>3、display的值是inline-block、table-cell、flex、table-caption或者inline-flex</p>
+<p>4、overflow的值不是visible</p>
+</li>
+<li><p>特性及作用</p>
+<p>解决</p>
+<ol>
+<li>浮动元素的父元素高度坍塌</li>
+<li>两栏自适应布局</li>
+<li>外边距垂直方向重合</li>
+</ol>
+</li>
 </ul>
 </li>
 <li><blockquote>
 <h5 id="清除浮动的方法（🌟🌟🌟）"><a href="#清除浮动的方法（🌟🌟🌟）" class="headerlink" title="清除浮动的方法（🌟🌟🌟）"></a>清除浮动的方法（🌟🌟🌟）</h5></blockquote>
+<pre><code>    1. 额外标签法（在最后一个浮动标签后，新加一个标签，给其设置clear：both；）
+      2. 父级添加overflow属性（父元素添加overflow:hidden）（不推荐）
+      3. 使用after伪元素清除浮动（推荐使用）
+      4. 使用before和after双伪元素清除浮动
+</code></pre>
 </li>
 <li><blockquote>
 <h5 id="position属性（绝对、相对、固定定位、粘性定位）（🌟🌟🌟）"><a href="#position属性（绝对、相对、固定定位、粘性定位）（🌟🌟🌟）" class="headerlink" title="position属性（绝对、相对、固定定位、粘性定位）（🌟🌟🌟）"></a>position属性（<strong>绝对、相对、固定定位</strong>、粘性定位）（🌟🌟🌟）</h5></blockquote>
@@ -471,6 +494,7 @@
 <ul>
 <li>Flex容器和项目常见属性，举例：常用考察布局</li>
 </ul>
+<p>三个重要概念：轴，对齐，弹性</p>
 </li>
 <li><p>双栏布局、三栏布局（每种布局掌握多种方法）（🌟🌟🌟）</p>
 </li>
@@ -481,6 +505,7 @@
 <li>了解各个选择器的优先级</li>
 <li>important属性</li>
 </ul>
+<p>ID选择器、标签选择器、类选择器、伪类选择器、属性选择器、结构选择器（6种）</p>
 </li>
 <li><p>CSS动画（难点，代码实现）（🌟🌟）</p>
 <ul>
@@ -563,14 +588,15 @@
 </ul>
 <p>​    <strong>typeof 操作符</strong></p>
 <p>​    由于<code>js</code>中的变量是松散类型的，所以它提供了一种检测当前变量的数据类型的方法，也就是typeof关键字.</p>
-<p>​    typeof  123　　 //Number</p>
-<p>​    typeof  ‘abc’　　//String</p>
-<p>​    typeof   true    //Boolean</p>
-<p>​    typeof   undefined  //Undefined</p>
-<p>​    typeof   null     //Object</p>
-<p>​    typeof   { }      //Object</p>
-<p>​    typeof   [ ]      //Object</p>
-<p>​    typeof   console.log()    //Function</p>
+<pre><code class="line-numbers language-js">typeof  123　　 //Number
+typeof  'abc'　　//String
+typeof   true    //Boolean
+typeof   undefined  //Undefined
+typeof   null     //Object
+typeof   { }      //Object
+typeof   [ ]      //Object
+typeof   console.log()    //Function
+</code></pre>
 <p>​    <strong>null类型进行typeof操作符后，结果是object</strong>，原因在于，null类型被当做一个空对象引用。</p>
 <p>​        </p>
 <p>​    <strong>Object.toString().call()</strong></p>
@@ -659,6 +685,7 @@ console.log('20'/'one') //NaN
 <li><p>作用域链（🌟）</p>
 </li>
 <li><p>let/var/const（🌟🌟🌟）【15-17是ES6易考点知识，阮一峰ES6入门】</p>
+<p>使用var声明的变量，其作用域为该语句所在的函数内，且存在变量提升现象；<br>使用let声明的变量，其作用域为该语句所在的代码块内，不存在变量提升；<br>使用const声明的是常量，在后面出现的代码中不能再修改该常量的值。</p>
 </li>
 <li><p>异步编程：promise和async await（🌟🌟🌟）</p>
 <ul>
@@ -1614,7 +1641,7 @@ console.log('20'/'one') //NaN
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.2k</span>&nbsp;字
+                class="white-color">13.6k</span>&nbsp;字
             
             
             
