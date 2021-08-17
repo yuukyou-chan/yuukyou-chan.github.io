@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="关于IAR&amp;STM32调试过程问题记录, Yuukyou&#39;s blog">
+    <meta name="keywords" content="基于XGBoost的集成学习算法, Yuukyou&#39;s blog">
     <meta name="description" content="无语也浪漫">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于IAR&amp;STM32调试过程问题记录 | Yuukyou&#39;s blog</title>
+    <title>基于XGBoost的集成学习算法 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -253,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于IAR&amp;STM32调试过程问题记录</h1>
+                    <h1 class="description center-align post-title">基于XGBoost的集成学习算法</h1>
                 </div>
             </div>
         </div>
@@ -374,16 +374,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/IAR/">
-                                <span class="chip bg-color">IAR</span>
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
-                            <a href="/tags/STM32/">
-                                <span class="chip bg-color">STM32</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/tags/%E7%94%B5%E8%84%91%E9%BC%A0/">
-                                <span class="chip bg-color">电脑鼠</span>
+                            <a href="/tags/%E9%9B%86%E6%88%90%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">集成算法</span>
+                            </a>
+                        
+                            <a href="/tags/XGBoost/">
+                                <span class="chip bg-color">XGBoost</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/">
+                                <span class="chip bg-color">数据清洗</span>
                             </a>
                         
                     </div>
@@ -394,8 +402,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91/" class="post-category">
-                                嵌入式开发
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
                             </a>
                         
                     </div>
@@ -407,21 +415,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-19
+                    2021-08-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-19
+                    2021-08-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    722
+                    874
                 </div>
                 
 
@@ -448,37 +456,76 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="IAR烧录时提示没有设备连接"><a href="#IAR烧录时提示没有设备连接" class="headerlink" title="IAR烧录时提示没有设备连接"></a>IAR烧录时提示没有设备连接</h2><p>当连接好电脑鼠并且检查线路没有问题并且驱动程序正常运行时，点击调试，出现“STM32 no emulator connected via USB…..”提示。</p>
-<p>在网上查找了很多资料基本上4个问题：</p>
-<pre><code class="line-numbers language-供电">1、板子一定要供电！
+                <p>   2021暑假已过大半，我的大二也即将结束，大二与大三似乎过度得很仓促。不太愿意承认自己马上就要大三了，好像什么都还没做这个夏天又要过去了，好像什么都没做就马上要走出大学的校门了。</p>
+<p>   这个暑假事情是比较多的，要准备9月初数模国赛，大创项目也要准备开题路演，而我又在实习。本来计划这个暑假初步完成大创的前端初稿，沉淀一下前端知识，得推一推了。马上开学而数模计划学习进度才刚过半，距离9月10号没剩几天了，得抓紧了✊练了一套19年国赛D题，本来以为会主要把时间花在模型训练，没想到的是大半时间都卡在数据清洗😅下面主要写的是XGBoost模型建立的代码，以及参数调整方法，本项目所用到的所有代码都已上传到<a target="_blank" rel="noopener" href="https://github.com/yuukyou-chan/MathModeling2019D">我的Github</a>，包括数据清洗，欢迎学习交流。</p>
+<p>正文分割线</p>
+<hr>
+<p>  &nbsp;在学习集成算法之前，我有学过一点神经网络和智能算法（模拟退火，遗传算法）我发现其实这些算法是有点共性的，智能算法像是神经网络的祖先，里面提到的梯度下降等各种概念特别是遗传算法和非常神经网络神似。</p>
+<p>  集成学习主要分为Bagging，Boosting，前者代表为随机森林，后者为XGBoost、GBDT</p>
+<p>按照我的理解XGBoost就像是用多个小而简单的多项式相加代换一个复杂整体的表达式，就像高数里面最令人头疼泰勒展开式一样。这里算法细节不在具体解释，下面上代码：</p>
+<blockquote>
+<h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2></blockquote>
+<p>导包基操：</p>
+<pre><code class="line-numbers language-python"># 导入包
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+import xgboost as xgb
 
-2、ST-LINK是否接触不良
-确保ST-LINK跟板子连接完好
+# 导入数据
+from xgboost import plot_importance
 
-3、按住reset点击download
-硬件和接线都没问题情况下，这时候可能是SWD的引脚被占用了，或者被禁用了。
-这时候ST-LINK自然无法通过SWD跟板子通信，所以才会提示No Target connected。
-所以，这时候按住reset，再点击download，再松开reset。原理就是在程序运行到SWD引脚占用之前，把新的程序烧录进去，抢个时间差。但是这招不是每次都管用，有概率性失败。
-但是不要紧，我们还有第四招
+data = pd.read_excel('合并.xls')
+data.head()
 
-4、boot0 接高电平download正常程序后，再接回低电平，即可烧录
-————————————————
-版权声明：本文为CSDN博主「小康师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/kangweijian/article/details/107564868```
+# 切分数据集
+feas = data.columns
+
+feas_var = feas[0:11]  # 多维输入变量
+feas_lab = feas[12]  # 输出变量
+
+X = data[feas_var]  
+Y = data[feas_lab]
+
+# 切分训练集和测试集
+from sklearn.model_selection import train_test_split
+x_train, x_valid, y_train, y_valid = train_test_split(X, Y, test_size=0.3, random_state=90)
 </code></pre>
-<p>但是这4个方法我都试过一遍<strong>还是没有解决。</strong></p>
-<p>最后看到一篇文章受到启发：<a target="_blank" rel="noopener" href="https://blog.csdn.net/c1063891514/article/details/81545601">https://blog.csdn.net/c1063891514/article/details/81545601</a></p>
-<p>解决方法与链接文章没太大关系</p>
-<p>是这篇文章最后两张图引起了我的注意，便想是不是连接设备接口没设置对，设置好接口果然设备连接成功了！！！具体步骤如下：</p>
-<p>1、右键点击demo-Debug，选择Opotions</p>
-<p><img src="/2021/03/19/IAR/1.jpg" alt="1"></p>
-<p>2、选择Debugger设置Driver为图示<img src="/2021/03/19/IAR/2.jpg" alt="2"></p>
-<p>3、点击Download设置，将图示√上即可<img src="/2021/03/19/IAR/3.jpg" alt="image-3"></p>
-<p>点击OK后IAR即可正常识别设备，记得<em><strong>编译</strong></em>后，再烧录！！</p>
-<p>电脑鼠连接不上电脑这个问题真的困扰了我们队伍好久！找老师又找学长又找老师又找学长,头发都快给我薅没了！体会还蛮深刻的，网络真的是个好东西，不懂的多问问别人，虽然别人不一定能帮你解决问题，但是会给你启发！<br><br>最后发个喜报！我买的域名终于过审了！！！！普天同庆！！！<br></p>
-<p>之前因为重重问题来来回回和腾讯打了5、6个电话，修改又驳回4次信息，最后腾讯还是冒着风险帮我把备案提交给管局的，真的差点我都不想要这个域名了，心底一块石头终于落地了。<br><br></p>
-<p>如果你觉得这篇文章解决了你的问题或者说对你还有用的话，欢迎打赏博主一块小饼干⸜₍๑•⌔•๑ ₎⸝。</p>
-<p>如果有什么问题可以在评论区底下留言哦，欢迎交流<em>⸜( •ᴗ• )⸝</em><br><br><br><br></p>
+<p>模型训练：</p>
+<pre><code class="line-numbers language-python"># 训练模型
+xgb_model = xgb.XGBRegressor(n_estimators=1000, random_state=50, verbosity=1, max_depth=15, min_child_weight=4, gamma=0.6)
+
+xgb_model.fit(x_train, y_train, eval_metric='mae', eval_set=[(x_valid, y_valid)], early_stopping_rounds=100)
+</code></pre>
+<p>模型评价：</p>
+<pre><code class="line-numbers language-python"># 模型评价
+from sklearn.metrics import mean_absolute_error, mean_squared_error, accuracy_score
+
+xgb_pred = xgb_model.predict(x_valid)
+print(np.corrcoef(xgb_pred, y_valid)[0, 1] ** 2)    # 相关系数
+print(mean_squared_error(xgb_pred, y_valid))        #均方误差
+print(mean_absolute_error(xgb_pred, y_valid))       #平均绝对误差
+
+# 准确率
+# accuracy = accuracy_score(y_valid,xgb_pred)
+# print('accuarcy:%.2f%%'%(accuracy*100))
+
+# 显示重要特征
+plot_importance(xgb_model)
+plt.show()
+</code></pre>
+<p>结果展示：</p>
+<p><img src="https://i.loli.net/2021/08/17/vKdCB5M39DOUVsE.png" alt="评价模型"></p>
+<p>相关系数0.75还算可以吧</p>
+<p><img src="https://i.loli.net/2021/08/17/sOmg9LDoWGawkS2.png" alt="特征重要度"></p>
+<p>很明显压强对于自建点检测值偏差影响较大</p>
+<blockquote>
+<h2 id="参数调整"><a href="#参数调整" class="headerlink" title="参数调整"></a>参数调整</h2></blockquote>
+<p>任何模型训练最头疼的就是参数调整了吧，之前写得神经网络调参也是我最头疼的一块，神经网络参数改动一点点效果也真的改动亿点点，不敢乱调神经网络，还好XGBoost比神经网络好调参，我在网上找到了一些XGBoost调参方法收藏一下。</p>
+<p><img src="https://i.loli.net/2021/08/17/EOILlkZfwx9McNq.png" alt="各项参数"></p>
+<p><img src="https://i.loli.net/2021/08/17/SbfgNotcIuPjKHA.png" alt="参数调节"></p>
+<p>一般先调生成树的个数，一般树个数越多，效果越好，但是树的增加会是代码运行非常缓慢，存在边际效益递减，树的的个数越多，搭配较小的学习率更好。</p>
 
                 
             </div>
@@ -505,7 +552,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yuukyou.cn/2021/03/19/IAR/">http://yuukyou.cn/2021/03/19/IAR/</a>
+                    <a href="http://yuukyou.cn/2021/08/17/XGBoost/">http://yuukyou.cn/2021/08/17/XGBoost/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -543,16 +590,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/IAR/">
-                                    <span class="chip bg-color">IAR</span>
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
-                                <a href="/tags/STM32/">
-                                    <span class="chip bg-color">STM32</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
                                 </a>
                             
-                                <a href="/tags/%E7%94%B5%E8%84%91%E9%BC%A0/">
-                                    <span class="chip bg-color">电脑鼠</span>
+                                <a href="/tags/%E9%9B%86%E6%88%90%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">集成算法</span>
+                                </a>
+                            
+                                <a href="/tags/XGBoost/">
+                                    <span class="chip bg-color">XGBoost</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/">
+                                    <span class="chip bg-color">数据清洗</span>
                                 </a>
                             
                         </div>
@@ -1050,17 +1105,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/03/22/JsonAndAjax/">
+                <a href="/2021/08/17/XGBoost/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="关于Json格式和Ajax的学习">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="基于XGBoost的集成学习算法">
                         
-                        <span class="card-title">关于Json格式和Ajax的学习</span>
+                        <span class="card-title">基于XGBoost的集成学习算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1070,34 +1126,43 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Json/">
-                        <span class="chip bg-color">Json</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/Ajax/">
-                        <span class="chip bg-color">Ajax</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
+                    <a href="/tags/%E9%9B%86%E6%88%90%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">集成算法</span>
+                    </a>
+                    
+                    <a href="/tags/XGBoost/">
+                        <span class="chip bg-color">XGBoost</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/">
+                        <span class="chip bg-color">数据清洗</span>
                     </a>
                     
                 </div>
@@ -1111,13 +1176,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/05/GitAndHexo/">
+                <a href="/2021/07/17/front-end-interview/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Markdown&amp;hexo&amp;Git常用操作">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="前端常考面试题">
                         
-                        <span class="card-title">Markdown&amp;hexo&amp;Git常用操作</span>
+                        <span class="card-title">前端常考面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1128,14 +1193,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/code/" class="post-category">
-                                    code
+                            <a href="/categories/%E9%9D%A2%E7%BB%8F/" class="post-category">
+                                    面经
                                 </a>
                             
                             
@@ -1145,8 +1210,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git-hexo/">
-                        <span class="chip bg-color">git&amp;hexo</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                        <span class="chip bg-color">面经</span>
+                    </a>
+                    
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
+                    </a>
+                    
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
+                    </a>
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
