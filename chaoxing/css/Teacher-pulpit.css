@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.Teacher-pulpit{
+	background: url(../images/graybg.png) no-repeat bottom center #FAFAFB;
+	width: 100%;
+}
+.wrap{
+	padding-bottom: 70px;
+	padding-top: 90px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.TP-tile{
+	text-align: center;
+	height: 63px;
+	position: relative;
+	font-size: 38px;
+	color: #0D1A26;
+	line-height: 53px;
+	font-family: Helvetica;
+	font-weight: 500;
+}
+.TP-tile span{
+	display: inline-block;
+	width: 64px;
+	height: 3px;
+	border-radius: 10px;
+	background: #dbe7f8;
+	position: absolute;
+	left: 50%;
+	margin-left: -32px;
+	bottom: 0;
+}
+.author-info{
+	color: #5E6E7D;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+}
+.author-info span{
+	color: #3A8BFF;
+	font-size: 28px;
+	padding: 0 10px;
+}
+.teacher-nav{
+	overflow: hidden;
+	margin-top: 50px;
+	width: 1200px;
+}
+#teacher-demo{
+	overflow: hidden;
+	width: 1200px;
+}
+#teacher-demo1{
+	float: left;
+}
+#teacher-demo2{
+	float: left;
+}
+.teacher-list a{
+	display: inline-block;
+	float: left;
+}
+a {
+    text-decoration: none;
+}
+.teacher-nav dl dt {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.teacher-nav dl {
+    width: 70px;
+    margin: 0 25px;
+}
+#teacher-indemo {
+    float: left;
+    width: 800%;
+}
+
+.teacher-nav dl dt img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+	opacity: 0.8;  
+	transition: all 0.2s ease;
+}
+.teacher-nav dl dt img:hover{
+	opacity: 1;
+}
+dd {
+    font-size: 16px;
+    color: #181E33;
+    margin-top: 12px;
+    text-align: center;
+}
+.video {
+    width: 1200px;
+    height: 410px;
+    margin-top: 60px;
+    position: relative;
+}
+.film{
+	float: left;
+	width: 730px;
+	height: 410px;
+	border-radius: 2%;
+	overflow: hidden;
+}
+video{
+	width: 730px;
+	height: 410px;
+}

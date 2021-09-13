@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>H5实训笔记</title>
+      <link href="2021/09/07/H5CSS3/"/>
+      <url>2021/09/07/H5CSS3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="CSS动画"><a href="#CSS动画" class="headerlink" title="CSS动画"></a>CSS动画</h2><p><code>transition:</code></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> H5 </tag>
+            
+            <tag> CSS3 </tag>
+            
+            <tag> JS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基于XGBoost的集成学习算法</title>
       <link href="2021/08/17/XGBoost/"/>
       <url>2021/08/17/XGBoost/</url>
