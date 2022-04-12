@@ -419,14 +419,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-12
+                    2022-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    4.9k
                 </div>
                 
 
@@ -877,9 +877,55 @@ var max = Math.max.apply(Math,arr);
 <li>深拷贝拷贝多层, 每一级别的数据都会拷贝（开辟新的内存空间）.</li>
 <li>Object.assign(target, …sources)    es6 新增方法可以浅拷贝</li>
 </ol>
-<h3 id="九、正则表达式"><a href="#九、正则表达式" class="headerlink" title="九、正则表达式"></a>九、正则表达式</h3><ol>
-<li>56</li>
+<h3 id="九、正则表达式"><a href="#九、正则表达式" class="headerlink" title="九、正则表达式"></a>九、正则表达式</h3><pre><code class="line-numbers language-js">1. 通过调用 RegExp 对象的构造函数创建
+   var 变量名 = new RegExp(/表达式/); 
+2. 通过字面量创建
+   var 变量名 = /表达式/; 
+
+3.test() 正则对象方法，用于检测字符串是否符合该规则，该对象会返回 true 或 false，其参数是测试字符串。
+
+   regexObj.test(str) 
+
+regexObj 是写的正则表达式
+str 我们要测试的文本
+就是检测str文本是否符合我们写的正则表达式规范.
+</code></pre>
+<h4 id="1-边界符"><a href="#1-边界符" class="headerlink" title="1.边界符"></a>1.边界符</h4><p><img src="/2022/01/01/JavaScrip/image-20220412113105193.png" alt="image-20220412113105193"></p>
+<h4 id="2-字符类"><a href="#2-字符类" class="headerlink" title="2.字符类"></a>2.字符类</h4><p>字符类表示有一系列字符可供选择，只要匹配其中一个就可以了。所有可供选择的字符都放在方括号内。</p>
+<ol>
+<li>[]  方括号   ：</li>
 </ol>
+<p><code>  /[abc]/.test('andy')     // true</code></p>
+<p>后面的字符串只要包含 abc 中任意一个字符，都返回 true 。</p>
+<ol start="2">
+<li>[-]  方括号内部 范围符-   </li>
+</ol>
+<p><code>   /^[a-z]$/.test(c')     // true</code></p>
+<p>方括号内部加上 - 表示范围，这里表示 a 到 z 26个英文字母都可以。</p>
+<ol start="3">
+<li> [^]  方括号内部 取反符^   </li>
+</ol>
+<p><code>   /[^abc]/.test('andy')     // false</code>   </p>
+<p>方括号内部加上 ^ 表示取反，只要包含方括号内的字符，都返回 false 。注意和边界符 ^ 区别，边界符写到方括号外面。  </p>
+<ol start="4">
+<li>字符组合</li>
+</ol>
+<p><code>   /[a-z1-9]/.test('andy')     // true</code></p>
+<p>方括号内部可以使用字符组合，这里表示包含 a 到 z 的26个英文字母和 1 到 9 的数字都可以。</p>
+<h4 id="4-量词符"><a href="#4-量词符" class="headerlink" title="4.量词符"></a>4.量词符</h4><p>量词符用来设定某个模式出现的次数。</p>
+<p><img src="/2022/01/01/JavaScrip/image-20220412113656611.png" alt="image-20220412113656611"></p>
+<h4 id="5-预定义类"><a href="#5-预定义类" class="headerlink" title="5.预定义类"></a>5.预定义类</h4><p><img src="/2022/01/01/JavaScrip/image-20220412194620293.png" alt="image-20220412194620293"></p>
+<p>正则完整符号参考手册：<a target="_blank" rel="noopener" href="https://jquery.cuishifeng.cn/regexp.html">https://jquery.cuishifeng.cn/regexp.html</a></p>
+<h4 id="6-replace替换"><a href="#6-replace替换" class="headerlink" title="6.replace替换"></a>6.replace替换</h4><p>replace() 方法可以实现替换字符串操作，用来替换的参数可以是一个字符串或是一个正则表达式。</p>
+<p><code>   stringObject.replace(regexp/substr,replacement)</code></p>
+<p>第一个参数:   被替换的字符串 或者  正则表达式<br>第二个参数:   替换为的字符串<br>返回值是一个替换完毕的新字符串</p>
+<p>正则表达式参数：<code>   /表达式/[switch]</code></p>
+<p>switch(也称为修饰符) 按照什么样的模式来匹配. 有三种值：</p>
+<ul>
+<li>g：全局匹配 </li>
+<li>i：忽略大小写 </li>
+<li>gi：全局匹配 + 忽略大小写</li>
+</ul>
 
                 
             </div>
@@ -1796,7 +1842,7 @@ var max = Math.max.apply(Math,arr);
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.6k</span>&nbsp;字
+                class="white-color">20.1k</span>&nbsp;字
             
             
             

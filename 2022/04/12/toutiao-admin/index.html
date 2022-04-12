@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="基于RNN、LSTM神经网络的基金净值预测, Yuukyou&#39;s blog">
+    <meta name="keywords" content="toutiao-admin, Yuukyou&#39;s blog">
     <meta name="description" content="无语也浪漫">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>基于RNN、LSTM神经网络的基金净值预测 | Yuukyou&#39;s blog</title>
+    <title>toutiao-admin | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -275,12 +275,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">基于RNN、LSTM神经网络的基金净值预测</h1>
+                    <h1 class="description center-align post-title">toutiao-admin</h1>
                 </div>
             </div>
         </div>
@@ -394,33 +394,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-                                <span class="chip bg-color">神经网络</span>
-                            </a>
-                        
-                            <a href="/tags/LSTM/">
-                                <span class="chip bg-color">LSTM</span>
-                            </a>
-                        
-                            <a href="/tags/RNN/">
-                                <span class="chip bg-color">RNN</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                机器学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -429,21 +408,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-30
+                    2022-04-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-30
+                    2022-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    0
                 </div>
                 
 
@@ -470,138 +449,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>都是神经网络惹的祸</p>
-</blockquote>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; 这个月花了将近100G的流量，大半都拿来下学习视频了。上次写了个爬虫把基金数据爬下来了，说是要数据分析一波，头脑热了一个礼拜，每天晚上都在搞神经网络的代码，光是装TensorFlow环境就搞了我3个晚上，到处在网上找代码学习，本来就差最后一步就把要程序跑出来了，结果卡在了反归一化上面，输入输出维度不匹配，又搞了好几天，终于神经网络把我劝退了。我发现这样是行不通的，整得太浮躁了，不懂计算原理直接啃代码，连输入输出是什么都不懂，一些基本的激活函数、归一函数、评价模型都不懂想直接调包也没那么容易，出结果<br></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp;后来大概过了大半个月，机缘巧合正好需要用到机器学习，我拾起了之前留下的烂摊子，慢慢（假的）基础知识学习，又搞起了机器学习。<br></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; 今天终于能把神经网络跑出来了😁好久没更新博客了，主要是最近没啥时间搞自己的东西，作业都写不完</p>
-<h2 id="大家好，我是调包侠"><a href="#大家好，我是调包侠" class="headerlink" title="大家好，我是调包侠"></a>大家好，我是调包侠</h2><p>虽然把神经网络跑出来了，中间还有些小问题，预测效果也不是很好，但是能跑出来</p>
-<p>我就非常开心了，后面会再把基础打扎实一些。<br></p>
-<p>先看效果图：</p>
-<p><img src="/2021/05/30/LSTMkeras/%E9%A2%84%E6%B5%8B.png" alt="预测"></p>
-<p>两条线基本拟合度不是很好，甚至可以说两条线没什么关系，细节波动预测不到，但是大致走势还比较正确（已经调整过很多种方案了，这是还比较像人样的）<br></p>
-<p>看看他的过去：可以说是毫不相干😡<br></p>
-<p>最开始这是纯RNN模型</p>
-<p><img src="/2021/05/30/LSTMkeras/RNN.png" alt="RNN"></p>
-<p>后来我改成了LSTM模型，发现更离谱：（后来我把模型的第一层改成LSTM就得到了图一）</p>
-<p><img src="/2021/05/30/LSTMkeras/LSTM.png"></p>
-<p>大概可以看出加入LSTM模型，预测值将会变得更趋于平缓，我猜可能是因为LSTM模型对长期记忆性导致的<br></p>
-<p>其中存在的问题是每次Epoch的val_loss值都是不变，而且loss值为什么都是nan，我去看了网上说是每次训练出来的权重不变（或者说没有更新），或者是模型错误造成的，俺不懂怎么办了，百思不得其解，有没有懂得大佬指点一下，感激涕零😭<img src="/2021/05/30/LSTMkeras/%E6%8D%9F%E5%A4%B1%E5%80%BC.png" alt="损失值"></p>
-<h2 id="下面康康学习过程"><a href="#下面康康学习过程" class="headerlink" title="下面康康学习过程"></a>下面康康学习过程</h2><p>好多包，我好爱</p>
-<pre><code class="line-numbers language-python">import numpy as np
-import tensorflow as tf
-from tensorflow.keras.layers import Dropout, Dense, SimpleRNN, LSTM
-import matplotlib.pyplot as plt
-import os
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import mean_squared_error, mean_absolute_error
-import math
-</code></pre>
-<p>导入数据和数据预处理：</p>
-<pre><code class="line-numbers language-python">yiliao = pd.read_csv('./SH600519.csv')
-#print(yiliao)
-training_set = yiliao.iloc[0:2426 - 300, 2:3].values  #前（1975-300）天的净值作为训练集，表格从0开始计数，2:3是提取[1:2）列，前闭后开，故提取出第二列净值
-test_set = yiliao.iloc[2426 - 300:, 2:3].values  #后300天的开盘价作为测试集
-
-#归一化
-sc = MinMaxScaler(feature_range=(0, 1))  #定义归一化；缩放到（0,1）之间
-training_set_scaled = sc.fit_transform(training_set)  #求得训练集的最大最小值这些训练集固有的属性，并在训练集上进行归一化
-test_set = sc.fit_transform(test_set)  #利用训练集的属性对测试集进行归一化
-</code></pre>
-<p>还是数据预处理，将数据训练集和测试集划分</p>
-<pre><code class="line-numbers language-python">测试集：csv表格中的前1975-300=1675天的数据
-#利用for循环，遍历整个训练集，提取训练集中连续60天的开盘价作为输入特征x_train,第61天的数据作为标签，for循环共构建1975-300-60=1615
-for i in range(60, len(training_set_scaled)):
-    x_train.append(training_set_scaled[i - 60:i, 0])
-    y_train.append(training_set_scaled[i: 0])
-#打乱训练集顺序
-np.random.seed(7)
-np.random.shuffle(x_train)
-np.random.seed(7)
-np.random.shuffle(y_train)
-tf.random.set_seed(7)
-#将训练集由list格式变为array格式
-x_train, y_train = np.array(x_train), np.array(y_train)
-#此处整个数据集送入，送入样本数为x_train.shape[0]及1615组数据
-x_train = np.reshape(x_train, (x_train.shape[0], 60, 1))#测试集：csv表格中后300天数据
-#...省略
-for i in range(60, len(test_set)):
-    x_test.append(test_set[i - 60:i, 0])
-    y_test.append(test_set[i, 0])
-#测试集变arry并reshape为符合RNN输入要求：[送入样本数， 循环核时间展开步数， 每个时间步输入的特征个数]
-x_test, y_test = np.array(x_test), np.array(y_test)
-x_test = np.reshape(x_test, (x_test.shape[0], 60, 1))
-</code></pre>
-<p>设定模型：</p>
-<pre><code class="line-numbers language-python">
-model = tf.keras.Sequential([
-    SimpleRNN(80, return_sequences=True),
-    Dropout(0.2),
-    SimpleRNN(100),
-    Dropout(0.2),
-    Dense(1)
-])
-
-model.compile(optimizer=tf.keras.optimizers.Adam(0.001),loss='mean_squared_error')  #损失函数用均方误差
-</code></pre>
-<p>保存训练好的模型：</p>
-<pre><code class="line-numbers language-python">checkpoint_sava_path = "./checkpoint/jijin.ckpt"
-
-if os.path.exists(checkpoint_sava_path + '.index'):
-    print('--------load the model--------')
-    model.load_weights(checkpoint_sava_path)
-
-cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_sava_path,
-                                                 save_weights_only=True,
-                                                 save_best_only=True,
-                                                 monitor='val_loss')
-history = model.fit(x_train, y_train, batch_size=128, epochs=5, validation_data=(x_test, y_test), validation_freq=1,
-                    callbacks=[cp_callback])
-model.summary()
-file = open('./weight.txt', 'w')  #参数提取
-for v in model.trainable_variables:
-    file.write(str(v.name) + '\n')
-    file.write(str(v.shape) + '\n')
-    file.write(str(v.numpy()) + '\n')
-file.close()
-
-loss = history.history['loss']
-val_loss = history.history['val_loss']
-</code></pre>
-<p>画出损失函数图：</p>
-<pre><code>plt.plot(loss, label='Training Loss')
-plt.plot(val_loss, label='Validation Loss')
-plt.title('Training and Validation Loss')
-plt.legend()
-plt.show()
-</code></pre>
-<p>测试集输入模型开始预测：</p>
-<pre><code class="line-numbers language-python">predicted_stock_price = model.predict(x_test)
-# 对预测数据还原--从（0-1）反归一化到原始范围
-predicted_stock_price = sc.inverse_transform(predicted_stock_price)
-# 对真实数据还原--从0-1）反归一化到原始范围
-real_stock_price = sc.inverse_transform(test_set[60:])
-# 画出真实数据和预测数据对比曲线
-plt.plot(real_stock_price, color='red', label='Jijin Price')
-plt.plot(predicted_stock_price, color='blue', label='Predicted Jijin Price')
-plt.title('Jijin Price Prediction')
-plt.xlabel('Time')
-plt.ylabel('Jijin Price')
-plt.legend()
-plt.show()
-</code></pre>
-<p>评价模型：</p>
-<pre><code class="line-numbers language-python">mse = mean_squared_error(predicted_stock_price, real_stock_price)
-# 均方根误差
-rmse = math.sqrt(mean_squared_error(predicted_stock_price, real_stock_price))
-# 平均绝对误差
-mae = mean_absolute_error(predicted_stock_price, real_stock_price)
-</code></pre>
-<p>以上<br></p>
-<p><strong>完整代码会上传到我的<a target="_blank" rel="noopener" href="https://github.com/yuukyou-chan">Github</a>，欢迎fock，顺便求助一下俺的问题555</strong></p>
-
+                
                 
             </div>
             <hr/>
@@ -627,7 +475,7 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yuukyou-chan.github.io/2021/05/30/LSTMkeras/">http://yuukyou-chan.github.io/2021/05/30/LSTMkeras/</a>
+                    <a href="http://yuukyou-chan.github.io/2022/04/12/toutiao-admin/">http://yuukyou-chan.github.io/2022/04/12/toutiao-admin/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -664,19 +512,7 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-                                    <span class="chip bg-color">神经网络</span>
-                                </a>
-                            
-                                <a href="/tags/LSTM/">
-                                    <span class="chip bg-color">LSTM</span>
-                                </a>
-                            
-                                <a href="/tags/RNN/">
-                                    <span class="chip bg-color">RNN</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1172,54 +1008,18 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/30/Hadoop/">
+                <a href="/2022/04/12/toutiao-admin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="HadoopExpriment">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="toutiao-admin">
                         
-                        <span class="card-title">HadoopExpriment</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-30
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Yuukyou
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/05/21/ML/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="机器学习入门笔记">
-                        
-                        <span class="card-title">机器学习入门笔记</span>
+                        <span class="card-title">toutiao-admin</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1230,14 +1030,52 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/04/01/VUEproject/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="VUE头条项目笔记">
+                        
+                        <span class="card-title">VUE头条项目笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/python/" class="post-category">
-                                    python
+                            <a href="/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -1247,16 +1085,8 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
-                        <span class="chip bg-color">数据挖掘</span>
+                    <a href="/tags/VUE%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">VUE项目</span>
                     </a>
                     
                 </div>
