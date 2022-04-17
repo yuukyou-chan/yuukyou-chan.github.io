@@ -430,7 +430,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.7k
                 </div>
                 
 
@@ -591,6 +591,26 @@
 </ol>
 </li>
 </ol>
+<h3 id="删除文章失败？（JS大数字问题）"><a href="#删除文章失败？（JS大数字问题）" class="headerlink" title="删除文章失败？（JS大数字问题）"></a>删除文章失败？（JS大数字问题）</h3><p>JavaScript 能够准确表示的整数范围在<code>-2^53</code>到<code>2^53</code>之间（不含两个端点），超过这个范围，无法精确表示这个值，这使得 JavaScript 不适合进行科学和金融方面的精确计算。</p>
+<p>关于一些json方法：</p>
+<p><strong>JSON 的常规用途是同 web 服务器进行数据传输。</strong></p>
+<p><strong>在从 web 服务器接收数据时，数据永远是字符串。</strong></p>
+<p><strong>通过 JSON.parse() 解析数据，这些数据会成为 JavaScript 对象。</strong></p>
+<pre><code class="line-numbers language-js">/*将服务器端接受的数据转换为js对象*/
+JSON.parse()  
+</code></pre>
+<p><strong>在向 web 服务器发送数据时，数据必须是字符串。</strong></p>
+<p><strong>通过 JSON.stringify() 把 JavaScript 对象转换为字符串。</strong></p>
+<pre><code>/*将js对象转换为字符串发送给服务器*/
+JSON.stringify()  
+</code></pre>
+<p>json-bigint 会把超出 JS 安全整数范围的数字转为一个 BigNumber 类型的对象，对象数据是它内部的一个算法处理之后的，我们要做的就是在使用的时候转为字符串来使用。 </p>
+<p>axios 为了方便我们使用数据，它会在内部使用 <code>JSON.parse()</code> 把后端返回的数据转为 JavaScript 对象，</p>
+<pre><code>解决思路：
+Axios 会在内部使用 JSON.parse 把后端返回的数据转为 JavaScript 数据对象。
+所以解决思路就是：不要让 axios 使用 JSON.parse 来转换这个数据，而是使用 json-biginit 来做转换处理。
+axios 提供了一个 API：transformResponse，在这里对返回的原数据进行操作
+</code></pre>
 
                 
             </div>
@@ -1213,13 +1233,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/01/VUEproject/">
+                <a href="/2022/01/01/JavaScrip/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="VUE头条项目笔记">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JavaScrip">
                         
-                        <span class="card-title">VUE头条项目笔记</span>
+                        <span class="card-title">JavaScrip</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1230,16 +1250,12 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/VUE/" class="post-category">
-                                    VUE
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
                             
                         </span>
                     </div>
@@ -1247,8 +1263,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VUE%E9%A1%B9%E7%9B%AE/">
-                        <span class="chip bg-color">VUE项目</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF%EF%BC%8Cjs/">
+                        <span class="chip bg-color">前端，js</span>
                     </a>
                     
                 </div>

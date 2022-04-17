@@ -419,7 +419,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-16
+                    2022-04-17
                 </div>
                 
 
@@ -530,7 +530,7 @@
 </ol>
 <p>构造函数存在的问题：（内存浪费）</p>
 <p>每新建一个构造函数就会开辟一个新的内存空间，同一个函数也会单独开辟新的空间，造成内存浪费。</p>
-<p><img src="/2022/01/01/JavaScrip/Users\19681\AppData\Roaming\Typora\typora-user-images\image-20220104091350513.png" alt="image-20220104091350513"></p>
+<p><img src="/2022/01/01/JavaScrip/image-20220417172029775.png" alt="image-20220417172029775"></p>
 <h4 id="2-构造函数原型prototype"><a href="#2-构造函数原型prototype" class="headerlink" title="2.构造函数原型prototype"></a>2.构造函数原型prototype</h4><p>JavaScript 规定，<strong>每一个构造函数都有一个 prototype 属性</strong>，指向另一个对象。注意这个 prototype 就<strong>是一个对象</strong>，这个对象的所有属性和方法，都会被构造函数所拥有。<br><strong>我们可以把那些不变的方法，直接定义在 prototype 对象上，这样所有对象的实例就可以共享这些方法。</strong></p>
 <p>问答？</p>
 <ol>
@@ -588,10 +588,10 @@
     var zxy = new Star('张学友', 19);
 </code></pre>
 <p>很多情况( 公共函数很多时 )下，我们需要重写原型对象prototype，这时候需要手动的利用constructor 这个属性指回 原来的构造函数，例如上段代码的14行。</p>
-<h4 id="5-构造函数、实例、原型对象三者之间的关系"><a href="#5-构造函数、实例、原型对象三者之间的关系" class="headerlink" title="5. 构造函数、实例、原型对象三者之间的关系"></a>5. 构造函数、实例、原型对象三者之间的关系</h4><p><img src="/2022/01/01/JavaScrip/Users\19681\AppData\Roaming\Typora\typora-user-images\image-20220104101146044.png" alt="image-20220104101146044"></p>
+<h4 id="5-构造函数、实例、原型对象三者之间的关系"><a href="#5-构造函数、实例、原型对象三者之间的关系" class="headerlink" title="5. 构造函数、实例、原型对象三者之间的关系"></a>5. 构造函数、实例、原型对象三者之间的关系</h4><p><img src="/2022/01/01/JavaScrip/image-20220417172049633.png" alt="image-20220417172049633"></p>
 <p>构造函数是原型对象的父级，原型对象通过构造函数创建出来。</p>
 <p>实例对象通过原型对象指向（找到）构造函数<code>ldh.__proto__.constructor</code></p>
-<h4 id="6-原型链（面试很容易问到）"><a href="#6-原型链（面试很容易问到）" class="headerlink" title="6. 原型链（面试很容易问到）"></a>6. 原型链（<strong>面试很容易问到</strong>）</h4><p><img src="/2022/01/01/JavaScrip/Users\19681\AppData\Roaming\Typora\typora-user-images\image-20220104105434631.png" alt="image-20220104105434631"></p>
+<h4 id="6-原型链（面试很容易问到）"><a href="#6-原型链（面试很容易问到）" class="headerlink" title="6. 原型链（面试很容易问到）"></a>6. 原型链（<strong>面试很容易问到</strong>）</h4><p><img src="/2022/01/01/JavaScrip/image-20220417172057243.png" alt="image-20220417172057243"></p>
 <p>原型对象prototype也是一个对象，它也有也有对象原型__ proto __，它指向Object原型对象prototype，Object原型对象的原型对象指向空。即Object就是所有类的父类。</p>
 <p>面试可能让你画原型链。</p>
 <p>JS的成员查找规则：</p>
@@ -890,7 +890,7 @@ regexObj 是写的正则表达式
 str 我们要测试的文本
 就是检测str文本是否符合我们写的正则表达式规范.
 </code></pre>
-<h4 id="1-边界符"><a href="#1-边界符" class="headerlink" title="1.边界符"></a>1.边界符</h4><p><img src="/2022/01/01/JavaScrip/image-20220412113105193.png" alt="image-20220412113105193"></p>
+<h4 id="1-边界符"><a href="#1-边界符" class="headerlink" title="1.边界符"></a>1.边界符</h4><p><img src="/2022/01/01/JavaScrip/image-20220417172118562.png" alt="image-20220417172118562"></p>
 <h4 id="2-字符类"><a href="#2-字符类" class="headerlink" title="2.字符类"></a>2.字符类</h4><p>字符类表示有一系列字符可供选择，只要匹配其中一个就可以了。所有可供选择的字符都放在方括号内。</p>
 <ol>
 <li>[]  方括号   ：</li>
@@ -913,8 +913,8 @@ str 我们要测试的文本
 <p><code>   /[a-z1-9]/.test('andy')     // true</code></p>
 <p>方括号内部可以使用字符组合，这里表示包含 a 到 z 的26个英文字母和 1 到 9 的数字都可以。</p>
 <h4 id="4-量词符"><a href="#4-量词符" class="headerlink" title="4.量词符"></a>4.量词符</h4><p>量词符用来设定某个模式出现的次数。</p>
-<p><img src="/2022/01/01/JavaScrip/image-20220412113656611.png" alt="image-20220412113656611"></p>
-<h4 id="5-预定义类"><a href="#5-预定义类" class="headerlink" title="5.预定义类"></a>5.预定义类</h4><p><img src="/2022/01/01/JavaScrip/image-20220412194620293.png" alt="image-20220412194620293"></p>
+<p><img src="/2022/01/01/JavaScrip/image-20220417172128838.png" alt="image-20220417172128838"></p>
+<h4 id="5-预定义类"><a href="#5-预定义类" class="headerlink" title="5.预定义类"></a>5.预定义类</h4><p><img src="/2022/01/01/JavaScrip/image-20220417172134688.png" alt="image-20220417172134688"></p>
 <p>正则完整符号参考手册：<a target="_blank" rel="noopener" href="https://jquery.cuishifeng.cn/regexp.html">https://jquery.cuishifeng.cn/regexp.html</a></p>
 <h4 id="6-replace替换"><a href="#6-replace替换" class="headerlink" title="6.replace替换"></a>6.replace替换</h4><p>replace() 方法可以实现替换字符串操作，用来替换的参数可以是一个字符串或是一个正则表达式。</p>
 <p><code>   stringObject.replace(regexp/substr,replacement)</code></p>
@@ -945,7 +945,7 @@ console.log(a) // a is not defined
 <p>经典面试题：</p>
 <p><img src="/2022/01/01/JavaScrip/image-20220413105712809.png" alt="image-20220413105712809"></p>
 <p>此时输出为2  2 </p>
-<p><img src="/2022/01/01/JavaScrip/image-20220413105748899.png" alt="image-20220413105748899"></p>
+<p><img src="/2022/01/01/JavaScrip/image-20220417172151029.png" alt="image-20220417172151029"></p>
 <p>此时输出为0 1</p>
 <p>此题的关键点在于<strong>每次循环都会产生一个块级作用域</strong>，每个块级作用域中的变量都是不同的，函数执行时输出的是自己上一级（循环产生的块级作用域）作用域下的i值.</p>
 <h3 id="十一、const关键字"><a href="#十一、const关键字" class="headerlink" title="十一、const关键字"></a>十一、const关键字</h3><p>作用：声明常量，常量就是值（内存地址）不能变化的量。声明常量时<strong>必须赋值</strong>。</p>
@@ -966,7 +966,7 @@ console.log(a) // a is not defined
  console.log(ary); // ['a', 'b']; 
  ary = ['a', 'b']; // Assignment to constant variable.
 </code></pre>
-<p><img src="/2022/01/01/JavaScrip/image-20220413113241266.png" alt="image-20220413113241266"></p>
+<p><img src="/2022/01/01/JavaScrip/image-20220417172158555.png" alt="image-20220417172158555"></p>
 <h3 id="十二、解构：数组、对象"><a href="#十二、解构：数组、对象" class="headerlink" title="十二、解构：数组、对象"></a>十二、解构：数组、对象</h3><h3 id="十三、箭头函数"><a href="#十三、箭头函数" class="headerlink" title="十三、箭头函数"></a>十三、箭头函数</h3><p>ES6中新增的定义函数的方式。</p>
 <pre><code class="line-numbers language-js">() =&gt; {} 
 const fn = () =&gt; {}
@@ -1114,8 +1114,8 @@ const ary = [...s3];
 <h4 id="2、遍历"><a href="#2、遍历" class="headerlink" title="2、遍历"></a>2、遍历</h4><p>Set 结构的实例与数组一样，也拥有forEach方法，用于对每个成员执行某种操作，没有返回值</p>
 <pre><code class="line-numbers language-js">s.forEach(value =&gt; console.log(value))
 </code></pre>
-<h3 id="十七、同步和异步"><a href="#十七、同步和异步" class="headerlink" title="十七、同步和异步"></a>十七、同步和异步</h3><p><img src="/2022/01/01/JavaScrip/image-20220416163047410.png" alt="image-20220416163047410"></p>
-<p><img src="/2022/01/01/JavaScrip/image-20220416163129173.png" alt="image-20220416163129173"></p>
+<h3 id="十七、同步和异步"><a href="#十七、同步和异步" class="headerlink" title="十七、同步和异步"></a>十七、同步和异步</h3><p><img src="/2022/01/01/JavaScrip/image-20220417172208313.png" alt="image-20220417172208313"></p>
+<p><img src="/2022/01/01/JavaScrip/image-20220417172213469.png" alt="image-20220417172213469"></p>
 <p>答案：2457<strong>3186</strong></p>
 <p>错：2457<strong>3816</strong></p>
 
@@ -1685,13 +1685,13 @@ const ary = [...s3];
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/01/VUEproject/">
+                <a href="/2022/04/12/toutiao-admin/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="VUE头条项目笔记">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="VUE头条后台项目总结">
                         
-                        <span class="card-title">VUE头条项目笔记</span>
+                        <span class="card-title">VUE头条后台项目总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1702,16 +1702,12 @@ const ary = [...s3];
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/VUE/" class="post-category">
-                                    VUE
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
                             
                         </span>
                     </div>
@@ -1719,8 +1715,12 @@ const ary = [...s3];
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VUE%E9%A1%B9%E7%9B%AE/">
-                        <span class="chip bg-color">VUE项目</span>
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
