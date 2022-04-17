@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="toutiao-admin, Yuukyou&#39;s blog">
+    <meta name="keywords" content="VUE头条后台项目总结, Yuukyou&#39;s blog">
     <meta name="description" content="无语也浪漫">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>toutiao-admin | Yuukyou&#39;s blog</title>
+    <title>VUE头条后台项目总结 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -275,12 +275,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">toutiao-admin</h1>
+                    <h1 class="description center-align post-title">VUE头条后台项目总结</h1>
                 </div>
             </div>
         </div>
@@ -394,9 +394,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
+                            </a>
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -415,14 +423,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-12
+                    2022-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.4k
                 </div>
                 
 
@@ -449,7 +457,141 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="VUE标签及属性"><a href="#VUE标签及属性" class="headerlink" title="VUE标签及属性"></a>VUE标签及属性</h3><h4 id="1、-lt-template-gt"><a href="#1、-lt-template-gt" class="headerlink" title="1、< template >"></a>1、&lt; template &gt;</h4><p>template是模板占位符，可以帮助我们包裹元素，但template并不会渲染在DOM节点中</p>
+<p>，并且template还可以使用v-for等指令，vue实例绑定的元素内部的template标签不支持v-show指令，即v-show=”false”对template标签来说不起作用。但是此时的template标签支持v-if、v-else-if、v-else、v-for这些指令。</p>
+<blockquote>
+<p>拓展：VUE生命周期，template和render函数渲染次序</p>
+</blockquote>
+<h4 id="2、-lt-style-scop-gt"><a href="#2、-lt-style-scop-gt" class="headerlink" title="2、< style  scop >"></a>2、&lt; style  scop &gt;</h4><p>加上scop表示样式作用域，只作用于当前文件。（不同文件的同名样式会导致冲突，后导入的包会覆盖之前的）</p>
+<p>&lt; style  scop lang=“less”&gt; 其中lang表示编译方式，默认是css</p>
+<h4 id="3、prop"><a href="#3、prop" class="headerlink" title="3、prop"></a>3、prop</h4><ul>
+<li><p>prop的作用就是父组件向子组件单向传递数据，该过程是单向的，传递的属性可以是静态的，也可以是动态的，可以是数字、字符串、数组、对象以及校验函数进行校验。</p>
+</li>
+<li><p>所有的prop都使得其父子组件之间形成了一个单向下行绑定：父组件的prop的更新会向下流动到子组件中，但反过来不行，这样就会防止从子组件意外改变父组件以及同级子组件的状态，从而导致应用的数据流难以理解。</p>
+</li>
+<li><p>每次父组件发生更新时，子组件中所有的prop都将刷新为最新的值，意味着不能在子组件内部改变prop，这样的话Vue会在控制台抛出一个警告。</p>
+</li>
+<li><p>在正常情况下，一般在父组件中通过v-bind定义一个动态值，子组件通过Prop接收该值，所以，很多人认为，Prop只能接收动态值。但是，其实Prop可以接受静态属性。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>tips：由于HTML中的属性是不区分大小写的，所以当使用DOM中的模板（HTML中）时，驼峰写法需要转化为短横线写法。但是，如果使用字符串模板（JS中）时，不受限制，可以为所欲为。</strong></p>
+</blockquote>
+<h4 id="4、-v-for-：key-diff算法"><a href="#4、-v-for-：key-diff算法" class="headerlink" title="4、 v-for ：key(diff算法)"></a>4、 v-for ：key(diff算法)</h4><p><img src="/2022/04/12/toutiao-admin/image-20220413234024899.png" alt="image-20220413234024899"></p>
+<p><img src="/2022/04/12/toutiao-admin/image-20220413234105407.png" alt="image-20220413234105407"></p>
+<p>面试题：react、vue中的key有什么作用？（key的内部原理）（<strong>diff算法</strong>）</p>
+<pre><code class="line-numbers language-html">1. 虚拟DOM中key的作用：
+    key是虚拟DOM对象的标识，当数据发生变化时，Vue会根据【新数据】生成【新的虚拟DOM】, 随后Vue进行【新虚拟DOM】与【旧虚拟DOM】的差异比较，比较规则如下：
+                                    
+2.对比规则：
+    (1).旧虚拟DOM中找到了与新虚拟DOM相同的key：
+        ①.若虚拟DOM中内容没变, 直接使用之前的真实DOM！
+        ②.若虚拟DOM中内容变了, 则生成新的真实DOM，随后替换掉页面中之前的真实DOM。
+
+    (2).旧虚拟DOM中未找到与新虚拟DOM相同的key
+        创建新的真实DOM，随后渲染到到页面。
+                                            
+3. 用index作为key可能会引发的问题：
+    1. 若对数据进行：逆序添加、逆序删除等破坏顺序操作:
+    会产生没有必要的真实DOM更新 ==&gt; 界面效果没问题, 但效率低。
+
+    2. 如果结构中还包含输入类的DOM：
+    会产生错误DOM更新 ==&gt; 界面有问题。
+
+4. 开发中如何选择key?:
+    1.最好使用每条数据的唯一标识作为key, 比如id、手机号、身份证号、学号等唯一值。
+    2.如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表用于展示，使用index作为key是没有问题的。
+</code></pre>
+<h4 id="5、-sync、-native、"><a href="#5、-sync、-native、" class="headerlink" title="5、 .sync、.native、"></a>5、 .sync、.native、</h4><h4 id="6、插槽（slot）：匿名、具名、作用域"><a href="#6、插槽（slot）：匿名、具名、作用域" class="headerlink" title="6、插槽（slot）：匿名、具名、作用域"></a>6、插槽（slot）：匿名、具名、作用域</h4><ol>
+<li><p>作用：让父组件可以向子组件指定位置插入html结构，也是一种组件间通信的方式，适用于 <strong>父组件 ===&gt; 子组件</strong> 。</p>
+</li>
+<li><p>分类：默认插槽、具名插槽、作用域插槽</p>
+</li>
+<li><p>使用方式：</p>
+<ol>
+<li><p>默认插槽：</p>
+<pre><code class="line-numbers language-vue">父组件中：
+        &lt;Category&gt;
+           &lt;div&gt;html结构1&lt;/div&gt;
+        &lt;/Category&gt;
+子组件中：
+        &lt;template&gt;
+            &lt;div&gt;
+               &lt;!-- 定义插槽 --&gt;
+               &lt;slot&gt;插槽默认内容...&lt;/slot&gt;
+            &lt;/div&gt;
+        &lt;/template&gt;
+</code></pre>
+</li>
+<li><p>具名插槽：</p>
+<pre><code class="line-numbers language-vue">父组件中：
+        &lt;Category&gt;
+            &lt;template slot="center"&gt;
+              &lt;div&gt;html结构1&lt;/div&gt;
+            &lt;/template&gt;
+
+            &lt;template v-slot:footer&gt;
+               &lt;div&gt;html结构2&lt;/div&gt;
+            &lt;/template&gt;
+        &lt;/Category&gt;
+子组件中：
+        &lt;template&gt;
+            &lt;div&gt;
+               &lt;!-- 定义插槽 --&gt;
+               &lt;slot name="center"&gt;插槽默认内容...&lt;/slot&gt;
+               &lt;slot name="footer"&gt;插槽默认内容...&lt;/slot&gt;
+            &lt;/div&gt;
+        &lt;/template&gt;
+</code></pre>
+</li>
+<li><p>作用域插槽：</p>
+<ol>
+<li><p>理解：数据在组件的自身，但根据数据生成的结构需要组件的使用者来决定。（games数据在Category组件中，但使用数据所遍历出来的结构由App组件决定）（<strong>子组件向父组件传递数据</strong>）</p>
+</li>
+<li><p>具体编码：</p>
+<pre><code class="line-numbers language-vue">父组件中：
+        &lt;Category&gt;
+            &lt;template scope="scopeData"&gt;
+                &lt;!-- 生成的是ul列表 --&gt;
+                &lt;ul&gt;
+                    &lt;li v-for="g in scopeData.games" :key="g"&gt;{{g}}&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/template&gt;
+        &lt;/Category&gt;
+
+        &lt;Category&gt;
+            &lt;template slot-scope="scopeData"&gt;
+                &lt;!-- 生成的是h4标题 --&gt;
+                &lt;h4 v-for="g in scopeData.games" :key="g"&gt;{{g}}&lt;/h4&gt;
+            &lt;/template&gt;
+        &lt;/Category&gt;
+子组件中：
+        &lt;template&gt;
+            &lt;div&gt;
+                &lt;slot :games="games"&gt;&lt;/slot&gt;
+            &lt;/div&gt;
+        &lt;/template&gt;
+        
+        &lt;script&gt;
+            export default {
+                name:'Category',
+                props:['title'],
+                //数据在子组件自身
+                data() {
+                    return {
+                        games:['红色警戒','穿越火线','劲舞团','超级玛丽']
+                    }
+                },
+            }
+        &lt;/script&gt;
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -512,7 +654,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
+                                </a>
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1017,9 +1167,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="toutiao-admin">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="VUE头条后台项目总结">
                         
-                        <span class="card-title">toutiao-admin</span>
+                        <span class="card-title">VUE头条后台项目总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1041,6 +1191,18 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1347,7 +1509,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.1k</span>&nbsp;字
+                class="white-color">23.1k</span>&nbsp;字
             
             
             
