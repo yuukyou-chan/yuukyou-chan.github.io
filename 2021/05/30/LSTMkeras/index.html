@@ -436,7 +436,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-30
+                    2022-10-10
                 </div>
                 
 
@@ -479,15 +479,15 @@
 <h2 id="大家好，我是调包侠"><a href="#大家好，我是调包侠" class="headerlink" title="大家好，我是调包侠"></a>大家好，我是调包侠</h2><p>虽然把神经网络跑出来了，中间还有些小问题，预测效果也不是很好，但是能跑出来</p>
 <p>我就非常开心了，后面会再把基础打扎实一些。<br></p>
 <p>先看效果图：</p>
-<p><img src="/2021/05/30/LSTMkeras/%E9%A2%84%E6%B5%8B.png" alt="预测"></p>
+<p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/%E9%A2%84%E6%B5%8B.png" alt="预测"></p>
 <p>两条线基本拟合度不是很好，甚至可以说两条线没什么关系，细节波动预测不到，但是大致走势还比较正确（已经调整过很多种方案了，这是还比较像人样的）<br></p>
 <p>看看他的过去：可以说是毫不相干😡<br></p>
 <p>最开始这是纯RNN模型</p>
-<p><img src="/2021/05/30/LSTMkeras/RNN.png" alt="RNN"></p>
+<p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/RNN.png" alt="RNN"></p>
 <p>后来我改成了LSTM模型，发现更离谱：（后来我把模型的第一层改成LSTM就得到了图一）</p>
-<p><img src="/2021/05/30/LSTMkeras/LSTM.png"></p>
+<p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/LSTM.png"></p>
 <p>大概可以看出加入LSTM模型，预测值将会变得更趋于平缓，我猜可能是因为LSTM模型对长期记忆性导致的<br></p>
-<p>其中存在的问题是每次Epoch的val_loss值都是不变，而且loss值为什么都是nan，我去看了网上说是每次训练出来的权重不变（或者说没有更新），或者是模型错误造成的，俺不懂怎么办了，百思不得其解，有没有懂得大佬指点一下，感激涕零😭<img src="/2021/05/30/LSTMkeras/%E6%8D%9F%E5%A4%B1%E5%80%BC.png" alt="损失值"></p>
+<p>其中存在的问题是每次Epoch的val_loss值都是不变，而且loss值为什么都是nan，我去看了网上说是每次训练出来的权重不变（或者说没有更新），或者是模型错误造成的，俺不懂怎么办了，百思不得其解，有没有懂得大佬指点一下，感激涕零😭<img src="https://gitee.com/Yuukyou/pic/raw/master/blog/%E6%8D%9F%E5%A4%B1%E5%80%BC.png" alt="损失值"></p>
 <h2 id="下面康康学习过程"><a href="#下面康康学习过程" class="headerlink" title="下面康康学习过程"></a>下面康康学习过程</h2><p>好多包，我好爱</p>
 <pre><code class="line-numbers language-python">import numpy as np
 import tensorflow as tf
@@ -1517,7 +1517,7 @@ mae = mean_absolute_error(predicted_stock_price, real_stock_price)
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.1k</span>&nbsp;字
+                class="white-color">37.4k</span>&nbsp;字
             
             
             
