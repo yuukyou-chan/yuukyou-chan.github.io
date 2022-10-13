@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="数据库学习笔记（持续更新4.18）, Yuukyou&#39;s blog">
+    <meta name="keywords" content="用友面试题汇总, Yuukyou&#39;s blog">
     <meta name="description" content="无语也浪漫">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库学习笔记（持续更新4.18） | Yuukyou&#39;s blog</title>
+    <title>用友面试题汇总 | Yuukyou&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 	<link rel="stylesheet" type="text/css" href="/libs/artitalk/artitalk.min.css">
 
@@ -275,12 +275,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库学习笔记（持续更新4.18）</h1>
+                    <h1 class="description center-align post-title">用友面试题汇总</h1>
                 </div>
             </div>
         </div>
@@ -396,23 +396,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">数据库，学习笔记</span>
+                            <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                                <span class="chip bg-color">面经</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                学习笔记
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -421,21 +412,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-17
+                    2022-10-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-10-10
+                    2022-10-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    2.3k
                 </div>
                 
 
@@ -462,194 +453,169 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一章：绪论"><a href="#第一章：绪论" class="headerlink" title="第一章：绪论"></a>第一章：绪论</h1><h1 id="第二章：关系型数据库"><a href="#第二章：关系型数据库" class="headerlink" title="第二章：关系型数据库"></a>第二章：关系型数据库</h1><blockquote>
-<h3 id="1、一些概念"><a href="#1、一些概念" class="headerlink" title="1、一些概念"></a>1、一些概念</h3></blockquote>
-<p>关系：实体与实体之间的联系（可以看做一张二维表）、</p>
-<p>候选码：若关系中的一个属性或属性组的值能够唯一地标识一个元组，且他的真子集不能唯一的标识一个元组，则称这个属性或属性组做候选码。</p>
-<p>主码：若一个关系有多个候选码，则选定其中一个为主码</p>
-<p>主属性：候选码的各个属性成为主属性</p>
-<p>全码：表中的所有属性都是这个表的候选码，则称为全码</p>
-<p><strong>外键（外码）</strong>：<mark>如果公共关键字在一个关系中是主键，那么这个公共关键字被称为另一个关系的外键。</mark></p>
-<p>关系三种类型：①基本表（基本关系）②查询表③视图表</p>
-<p>关系模式：关系的描述称为关系模式（即为表头）</p>
-<blockquote>
-<h3 id="2、关系完整性"><a href="#2、关系完整性" class="headerlink" title="2、关系完整性"></a>2、关系完整性</h3></blockquote>
-<ol>
-<li>实体完整性：实体完整性要求每个数据表都必须有主键，而作为主键的所有字段，其属性必须是独一及<strong>非空值</strong>。</li>
-<li>参照完整性：参照的关系中的属性值必须能够在被参照关系找到或者取空值</li>
-<li>用户定义完整性</li>
-</ol>
-<blockquote>
-<h3 id="3、列级完整性约束和表级完整性约束"><a href="#3、列级完整性约束和表级完整性约束" class="headerlink" title="3、列级完整性约束和表级完整性约束"></a>3、列级完整性约束和表级完整性约束</h3></blockquote>
-<p>列级约束有六种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）、default （默认）、not null/ null（非空/空值 ）<br>表级约束有四种：Primary key（主键）、foreign key（外键） 、 unique（唯一）、 check （检查）</p>
-<p><strong>只能是列级完整性约束</strong>：default （默认）、not null/ null（非空/空值 ）</p>
-<h1 id="第三章：SQL语句"><a href="#第三章：SQL语句" class="headerlink" title="第三章：SQL语句"></a>第三章：SQL语句</h1><blockquote>
-<h3 id="1、数据类型"><a href="#1、数据类型" class="headerlink" title="1、数据类型"></a>1、数据类型</h3></blockquote>
-<p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B1.png" alt="数据类型1"></p>
-<p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B2.png" alt="数据类型2"></p>
-<blockquote>
-<h3 id="2、基本表的定义、修改与删除"><a href="#2、基本表的定义、修改与删除" class="headerlink" title="2、基本表的定义、修改与删除"></a>2、基本表的定义、修改与删除</h3></blockquote>
-<h5 id="基本操作语句"><a href="#基本操作语句" class="headerlink" title="基本操作语句"></a>基本操作语句</h5><h5 id="表的定义"><a href="#表的定义" class="headerlink" title="表的定义"></a>表的定义</h5><pre><code class="line-numbers language-sql">create table student (
-    列名 数据类型 列级完整性约束
-    sno char(9) unique,
-    ssex char(2),
-    primary KEY(sno),
-    foreing key(sno) refferences student(sno)
-);
-</code></pre>
-<h5 id="表的修改"><a href="#表的修改" class="headerlink" title="表的修改"></a>表的修改</h5><p><img src="https://gitee.com/Yuukyou/pic/raw/master/blog/%E4%BF%AE%E6%94%B9%E8%A1%A8.png" alt="修改表"></p>
-<p>[]:可以出现，可以不出现</p>
-<p>&lt;&gt;:一定会出现<code> drop</code>是删除</p>
-<p>注：上述</p>
-<h5 id="表的删除"><a href="#表的删除" class="headerlink" title="表的删除"></a>表的删除</h5><blockquote>
-<h3 id="3、数据查询"><a href="#3、数据查询" class="headerlink" title="3、数据查询"></a>3、数据查询</h3></blockquote>
-<p><strong>数据查询是数据库的<mark>核心操作</mark></strong></p>
-<p>查询的一般格式（块）为：</p>
-<pre><code class="line-numbers language-sql">select  目标列表达式
-from 表明或视图名
-where 条件表达式
-group by 列名 having 选择组的条件
-order by 列名 asc/desc（升降序）
-</code></pre>
-<p><mark><strong>执行顺序为</strong></mark>：from→where→select</p>
-<h4 id="一、单表查询："><a href="#一、单表查询：" class="headerlink" title="一、单表查询："></a>一、单表查询：</h4><ol>
-<li><p><strong>选择表中的若干列</strong></p>
-<p>（1）查询指定列</p>
-<pre><code class="line-numbers language-sql">select Sname，Sno，Sdept
-from Student；
-</code></pre>
-<p>（2）查询所有列</p>
-<pre><code class="line-numbers language-sql">select *
-from Student；
-</code></pre>
-<p>（3）查询经过计算的值</p>
-<p>select语句中的目标表达式可以是表中的<strong>属性列</strong>，也可以是<strong>表达式</strong>，还可以是<strong>字符串常量</strong>、<strong>函数</strong>等</p>
-<p>例：查询全体学生的姓名及其出生年份</p>
-<pre><code class="line-numbers language-sql">select Sname，'Year of Birth' birth，2021-Sage   /*当前年份-年龄*/
-from Student；
-</code></pre>
-<p>输出结果为：</p>
-<table>
-<thead>
-<tr>
-<th align="center">Sname</th>
-<th align="center">birth</th>
-<th align="center">2021-Sage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">李勇</td>
-<td align="center">Year of Birth</td>
-<td align="center">1994</td>
-</tr>
-<tr>
-<td align="center">李晨</td>
-<td align="center">Year of Birth</td>
-<td align="center">1995</td>
-</tr>
-</tbody></table>
-<p>注意：上方代码块中的<code> 'Year of Birth' birth</code>表示将’Year of Birth’列命名为birth，中间用空格号分隔开</p>
-<br></li>
-<li><p><strong>选择表中的若干元组</strong></p>
-</li>
-</ol>
-<p>（1）消除取值重复的行</p>
-<p><strong>distinct</strong>：消除取值重复的行<code> select distinct Sno</code><br></p>
-<p>若没有指定<code>distinct</code>关键字则默认为all</p>
-<p>（2）查询满足条件的元组</p>
-<p><strong>where</strong>：查询满足条件的元组</p>
-<p><img src="/2021/04/17/DataBase/%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6.png" alt="常用查询条件"></p>
-<pre><code class="line-numbers language-sql">①比较大小
-where Sdept='cs'
-where Sage&lt;20
-
-②确定范围
-where Sage between 20 and 23
-
-③确定集合
-where Sedpt in('CS','MA','IS')
-
-④字符分配
-  %：代表任意长度（可以为0）的字符串。
-  _：代表任意单个字符
-where Sname like'_阳%'（查询第二个字为阳的学生）
-
-⑤涉及空值的查询
-where Grade is null
-
-⑥多充条件查询
-使用 and 或者 or，通常 and的优先级高于 or，可以使用括号改变优先级
-where Sdept='CS'and Sage&lt;20
-注：实际上 in是多个 or运算符的缩写
-</code></pre>
-<br>
-
-<p>   3.<strong>order by语句</strong></p>
-<p>升序：ASC</p>
-<p>降序：DESC</p>
-<p><strong>默认为升序</strong></p>
-<p>例：查询结果按所在的系的系号升序排列，同一系中的学生按年龄降序排列：</p>
-<p><code>order by Sdept，Sage desc</code></p>
-<br>
-
-<ol start="4">
-<li><strong>聚集函数</strong></li>
-</ol>
-<p><img src="/2021/04/17/DataBase/DataBase%5C%E8%81%9A%E9%9B%86%E5%87%BD%E6%95%B0.png" alt="聚集函数"></p>
-<p><code>查询学生总人数：select count(distinct Sno)</code></p>
-<p><code>计算平均成绩：select avg(Grade)</code></p>
-<br>
-
-<ol start="5">
-<li><strong>group by 语句</strong></li>
-</ol>
-<p>group by子句将查询结果按某一列或多列的值分组，值相等的为一组。</p>
-<pre><code class="line-numbers language-sql">求各个课程号及相应选课人数
-select Con,count(Sno)
-from sc
-group by Con
-
-***查询选修了三门以上课程的学生学号
-select Sno
-from sc
-group by Sno
-having count()
-
-***求选课在三门以上（包括三门）且各门课程均及格的学生的学号及其总成绩，查询结果按总成绩降序列出
-select sno,sum(score)
-from sc
-where score&gt;=60
-group by sno
-having count(*)&gt;=3
-order by sum(score)desc
-
-执行过程：
-1.from   取出整个sc
-2.where  筛选score&gt;=60的元组
-3.group by  将选出的元组按sno分组
-4.having  筛选选课三门以上的分组
-5.select  将选中的组中提取学号和总成绩
-6.order by  将选取结果排序
-先用where语句查询效率更高，如果直接用group则将会在sc表中的所有元组进行分组，若先用where则group将在筛选出来的元组中进行分组，提高了查询效率。
-</code></pre>
-<p>执行顺序为：where→group by→having</p>
-<p>辨析：where作用于<strong>基本表</strong>或者<strong>视图</strong>，having作用于<strong>组</strong></p>
-<br>
-
-<h4 id="二、连接查询"><a href="#二、连接查询" class="headerlink" title="二、连接查询"></a>二、连接查询</h4><p><strong>1.等值于非等值连接查询</strong></p>
-<p><code>where student.sno = sc.sno</code></p>
-<p>以上比较运算符‘ = ’可以有：=、&gt;、&lt;、&gt;=、&lt;=</p>
-<p><em>此时连接查询的where句子用来连接两个表的条件称为<strong>连接条件</strong>或者*<em>连接谓词</em></em></p>
-<p>*连接谓词中的列名称为<strong>连接字段</strong>（student.sno）</p>
-<br>
-
-<p><strong>2.自身连接</strong></p>
-<br>
-
-<p><strong>3.外连接</strong></p>
-<p>定义：有时想以学生标student为主体，列出每个学生的基本情况及选课情况，如果某个学生没有选课，仍把该学生的记录留在结果关系中，而在sc表中的属性值加上NULL，这时就需要外连接。</p>
-<pre><code class="line-numbers language-sql">  
-</code></pre>
+                <h1 id="JS基础部分"><a href="#JS基础部分" class="headerlink" title="JS基础部分"></a>JS基础部分</h1><p>1、<strong>异步与多线程有没有关系，是不是并发执行的过程</strong>？ </p>
+<p>​    单线程，多线程区别</p>
+<p>21.多线程之间的通信方式</p>
+<p>3、懒加载怎么知道它出现在视口页面 （4）（<strong>图片懒加载原理、实现方式有哪些</strong>）</p>
+<p>4、js基础<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>类型。引用<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>类型（3）</p>
+<p>5、类型判定方法</p>
+<p>7、事件循环题</p>
+<p>8、怎么不使用额外内存，交换两个变量</p>
+<p>9、<strong>函数科里化</strong></p>
+<p>11、说一下settimeout,说一下浏览器的时间循环？</p>
+<p>12、说一下类的继承？</p>
+<p>13、说一下原型与原型链？如何继承？（3）</p>
+<p>14、<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>泄露，<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>溢出</p>
+<p>15、闭包，怎么理解(3)</p>
+<p>16、闭包有什么缺点（2）</p>
+<p>17、浏览器事件模型,事件机制，冒泡和捕获（2）事件冒泡与阻止冒泡</p>
+<p>18、settimeout的缺点；说说settimeout怎么工作的，如果时间是0怎么办（3）</p>
+<p>19、<strong>事件委托的原理</strong></p>
+<p>20、<strong>多线程的串行和并行</strong>（2）</p>
+<p>20、线程和进程了解不？区别是啥？</p>
+<p>21、<strong>for…of for…in  for循环</strong></p>
+<p>22、<strong>箭头函数和普通函数的区别（3）自函数</strong></p>
+<p>23、<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E7%AE%97%E6%B3%95">算法</a>写过没，写过哪些？<strong>数组了解吗？怎么存储更新呢（和内存结合起来说）堆栈区别</strong>；(2)。</p>
+<p>24、<strong>js 异步历史</strong>聊一下。</p>
+<p>25、let, const, var区别；</p>
+<p>26、undefied 和 null，怎么判断是undefied；</p>
+<p>27、谈谈 es6、forEach 与 map区别-没答上，平时遍历用哪个(2)</p>
+<p>28、new一个对象的过程（2）</p>
+<p>29、<strong>sort函数传参</strong></p>
+<p>30、0.1+0.2如何准确</p>
+<p>31、<strong>js数组与字符串的api</strong></p>
+<p>32、es6的set（）与map（）</p>
+<p>33、<strong>异步编程的方法都有哪些</strong>（3）</p>
+<p>34、递归  <strong>递归形成回调地狱会浏览器崩了</strong>，怎末解决回调地狱  大多数的递归大都采用for循环,for循环效率高很多   promise  async/await</p>
+<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><p>1、Promise 和 async、await 说一下</p>
+<p>2、Promise.all 说一下</p>
+<p>3、es6新特性——es6了解吗？说一下理解。（2)</p>
+<p>4、介绍一下Promise</p>
+<p>5、<strong>ES6和CommonJS</strong></p>
+<p>6、es5 和 es6 的类的区别。</p>
+<p>7、<strong>promise all race、Promise有哪些方法  all race方法以及应用场景</strong>（3）</p>
+<p>8、对于es6的新语法，为了使浏览器支持，<strong>除了bable解析，其他的，比如promise解析玩可能还是语法糖，但是浏览器不识别pormise，怎么处理；babel和ployfill</strong>（3）</p>
+<p>​    babel转换的内部了解过吗</p>
+<h1 id="JS手写部分"><a href="#JS手写部分" class="headerlink" title="JS手写部分"></a>JS手写部分</h1><p>1、<strong>手写filter函数</strong>（2）</p>
+<p>2、<strong>继承</strong></p>
+<p>3、<strong>深拷贝</strong></p>
+<p>4、<strong>模拟实现数组的 push()</strong> ，至少三种方法</p>
+<p>5、手写防抖或节流</p>
+<h1 id="计算机网络-浏览器部分"><a href="#计算机网络-浏览器部分" class="headerlink" title="计算机网络/浏览器部分"></a>计算机网络/浏览器部分</h1><p> 1、<strong>http请求类型，怎么判断什么情景什么请求</strong>   </p>
+<p> 2、<strong>系统中会有消息的闪烁，这种消息的渲染变化如何实现，（前端如何收到后端通知）</strong></p>
+<p>​    <strong>答：轮循，websocket</strong>  </p>
+<p>3、跨域及解决</p>
+<p>4、输入url发生了什么？（6）cdn</p>
+<p>5、http状态码？403 404 304（4）</p>
+<p>6、http/https（https加密原理）；HTTPS服务器为什么把公钥发送给客户端（3）</p>
+<p>8、前端存储方式 localStorage、sessionStorage 、cookie存储大小限制了解吗（4）</p>
+<p>​    说一下浏览器的缓存方式 及其区别还有应用场景？ 登录信息存在哪里？    浏览器的历史记录存在哪？为什么？</p>
+<p>9、常用的HTTP请求方法</p>
+<p>10、GET 与 POST 的区别</p>
+<p>11、<strong>如何发现请求超时</strong></p>
+<p>12、<strong>常见的状态码底层</strong>（2）</p>
+<p>13、http1.0 和 http2.0 的区别（4）</p>
+<p>14、静态资源的请求是并行请求，还是串行请求 </p>
+<p>15、<strong>cookie在哪写的</strong></p>
+<p>16、<strong>软件工程设计模式</strong></p>
+<p>17、cooike怎么保存到本地的，Cooike怎么跨域</p>
+<p>18、<strong>TCP UDP区别</strong>、 tcp如何保证<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>的可靠传输，和udp的区别（2）</p>
+<p>19、三次握手，四次挥手为什么不五次或者三次</p>
+<p>20、 pc端，移动端，多个请求去请求一个api，但是对于不同的端，需要的<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>格式不同，你怎么区分</p>
+<p>21、<strong>nginx你使用过哪些功能</strong>，具体的实现了解过吗</p>
+<p>22、 localStorage，如果满了，客户端如何处理？</p>
+<p>23、缓存的实现？304服务端和前端如何是实现？</p>
+<p>24、<strong>jsonp存在的安全问题</strong>、jsonp（2）</p>
+<p>25、</p>
+<h1 id="框架部分"><a href="#框架部分" class="headerlink" title="框架部分"></a>框架部分</h1><p>1、vue中如何监听到路由地址的变化，怎么实现的？底层基于什么实现的</p>
+<p>2、vue路由模式</p>
+<p>3、history模式的缺点</p>
+<p>4、vue生命周期钩子（3）vue 的生命周期，要获取dom和<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>分别在哪个生命周期</p>
+<p>5、vue3和vue2的区别（3）</p>
+<p>6、用过vuex没</p>
+<p>7、eventbus没</p>
+<p>8、<strong>场景题：说一下兄弟组件，都有一个input框，如何a输入，b组件中input框也输入</strong>？</p>
+<p>9、vue 通信方式（2）</p>
+<p>10、虚拟dom了解过吗？<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>的更新，最后是怎么反映到真实 dom 树上的？</p>
+<p>11、Vue 的路由懒加载是怎么实现的？</p>
+<p>12、Vue 的 v-if 和 v-show 的区别</p>
+<p>13、<strong>Vue 过滤器</strong>用过吗？</p>
+<p>14、Keepalive 呢？</p>
+<p>15、说一下 vue 的常用指令</p>
+<p>16、<strong>vue的新特性</strong>有哪些?</p>
+<p>17、vue双向<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>绑定原理？</p>
+<p>18、<strong>vue中如何监听到路由地址的变化（history）</strong>，怎么实现的？底层基于什么实现的</p>
+<p>19、vue-router</p>
+<p>20、SPA和MPA（2）</p>
+<p>21、VUE事件绑定原理</p>
+<p>22、vue的子组件和父组件生命周期的顺序</p>
+<p>23、v-for key值的作用</p>
+<p>24、<strong>vue状态提升</strong></p>
+<p>25、<strong>设计模式</strong>（3）<br>    单例模式</p>
+<p>​    对MVVM的理解</p>
+<h1 id="HTML和CSS部分"><a href="#HTML和CSS部分" class="headerlink" title="HTML和CSS部分"></a>HTML和CSS部分</h1><p>1、问<strong>浏览器三层</strong>，开始没懂，问了面试官原来问html css js。答了下他们的关系（三层模型）</p>
+<p>4、html meta标签</p>
+<p>5、css高度塌陷（2）</p>
+<p>6、css块级元素，内联元素（2）</p>
+<p>​    Html块级元素和 行内元素有哪些？ 区别？ 怎么互相转变</p>
+<p>7、说说回流与重绘（3）怎么触发</p>
+<p>7、flex有哪些属性（3）</p>
+<p>8、<strong>viewport</strong>？</p>
+<p>9、垂直居中的方式</p>
+<p>10、讲一下盒子模型（2）</p>
+<p>11、HTML语义化的了解</p>
+<p>12、CSS选择器优先级</p>
+<p>13、**@import 与 link 的区别**</p>
+<p>14、清除浮动的方式</p>
+<p>15、隐藏元素的几种方式</p>
+<p>16、html5新特性</p>
+<p>17、css3新特性</p>
+<p>18、<strong>px、em、rem</strong></p>
+<p>19、<strong>实现一个div高宽度度由100变为110纯css实现（伪类+transition</strong></p>
+<p>20、<strong>css3动画属性</strong></p>
+<p>21、sass和less知道吗？ 那<strong>sass是怎样转换成css代码</strong>？</p>
+<p>22、<strong>canvas</strong>  一些用法，在canvas上设置事件怎末</p>
+<p>​    .canvas会导致重绘，怎末提升性能，解决（不会，说到了DOM里的重绘 🤣）</p>
+<p>23、<strong>svg</strong>了解过吗</p>
+<p>24、一<strong>个九宫格切换的时候，引起抖动怎么解决</strong></p>
+<h1 id="优化部分"><a href="#优化部分" class="headerlink" title="优化部分"></a>优化部分</h1><p>1、web首评渲染，ssr</p>
+<p>2、懒加载怎么知道它出现在视口页面 </p>
+<h1 id="项目部分"><a href="#项目部分" class="headerlink" title="项目部分"></a>项目部分</h1><p>1、介绍实习的工作，工作难点，如何解决的。</p>
+<p>（1）用纯JS请求几千条<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>，这会带来很大的时间开销，应该如何去优化</p>
+<p>（2）<strong>拍平数组</strong>，应该如何去实践，以及如何优化（优化递归）</p>
+<p>2、说一说性能优化（项目相关</p>
+<p>3、无限下拉优化</p>
+<p>4、做项目的过程</p>
+<p>5、想知道是怎么分工的？大概做了多久？</p>
+<p>6、微信小程序中的垂直居中布局怎么实现的？（用flex布局</p>
+<p>7、针对你做过的项目，印象最深刻的说一下</p>
+<p>8、项目里如何实现自适应？媒体查询</p>
+<p>9、<strong>分页请求后端<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%95%B0%E6%8D%AE">数据</a>，传哪些参数,分页表格如何设计？</strong>(2)</p>
+<h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><p>1、webpack了解吗，有没有做过独立项目，webpack使用插件的话，一般怎么用</p>
+<p>2、webpack提升打包构建速度和体积的方法</p>
+<p>3、webpack执行流程</p>
+<p>4、前端打包工具是什么？  那你vue项目用的是什么打包工具？  为什么要用打包工具？</p>
+<h1 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h1><p>1、刷过力扣没，来了道<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C">两数之和</a></p>
+<p>2、手撕代码，求字符串出现最多的字符</p>
+<p>3、说一下常见的<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%8E%92%E5%BA%8F">排序</a>？</p>
+<p>4、<strong>解析url</strong>(手写，写出来了)，不会正则，有点冗余。</p>
+<p>5、<strong>数组扁平化</strong>（2）</p>
+<p>6、<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/"><strong>删除排序链表中的重复元素</strong></a></p>
+<p>7、介绍几个整数<strong>数组去重</strong>的方法</p>
+<p>8、汉诺塔问题知道吗？可以手写一下吗？</p>
+<p>9、写一个函数输出2-8之间随机数(2)</p>
+<p>10、撕代码打印一个矩阵的双对角线(2)</p>
+<p>11、两行代码实现数组各元素+1</p>
+<p>12、<strong>实现回文字符串的判断</strong></p>
+<p>13、<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E6%8E%92%E5%BA%8F">排序</a><a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E7%AE%97%E6%B3%95">算法</a>，时间复杂度，空间复杂度</p>
+<p>14、<strong>青蛙<a target="_blank" rel="noopener" href="https://www.nowcoder.com/jump/super-jump/word?word=%E8%B7%B3%E5%8F%B0%E9%98%B6">跳台阶</a></strong> 时间复杂度和空间o（n），能不能改成o（1）的</p>
+<h1 id="拓展题"><a href="#拓展题" class="headerlink" title="拓展题"></a>拓展题</h1><p>1、你最近在看什么书？</p>
+<p>2、平时有什么兴趣爱好</p>
+<p>3、自己学习前端的方式</p>
+<p>4、自己有什么优势</p>
+<p>5、遇到困难的时候怎么办</p>
+<p>6、对目前前端有什么认识(从所见即所得到目前技术各种复杂)</p>
+<p>7、为什么选择前端,</p>
 
                 
             </div>
@@ -676,7 +642,7 @@ order by sum(score)desc
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yuukyou-chan.github.io/2021/04/17/DataBase/">http://yuukyou-chan.github.io/2021/04/17/DataBase/</a>
+                    <a href="http://yuukyou-chan.github.io/2022/10/13/yongyou/">http://yuukyou-chan.github.io/2022/10/13/yongyou/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,8 +680,8 @@ order by sum(score)desc
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">数据库，学习笔记</span>
+                                <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                                    <span class="chip bg-color">面经</span>
                                 </a>
                             
                         </div>
@@ -1217,13 +1183,13 @@ order by sum(score)desc
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/21/ML/">
+                <a href="/2022/10/13/projectPrepare/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="机器学习入门笔记">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="面试准备">
                         
-                        <span class="card-title">机器学习入门笔记</span>
+                        <span class="card-title">面试准备</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1234,16 +1200,12 @@ order by sum(score)desc
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-13
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/python/" class="post-category">
-                                    python
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
                             
                         </span>
                     </div>
@@ -1251,16 +1213,12 @@ order by sum(score)desc
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/%E9%9D%A2%E7%BB%8F/">
+                        <span class="chip bg-color">面经</span>
                     </a>
                     
-                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
-                        <span class="chip bg-color">数据挖掘</span>
+                    <a href="/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
@@ -1274,13 +1232,13 @@ order by sum(score)desc
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/11/FundSpyder/">
+                <a href="/2022/05/20/DOM/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="关于爬虫爬取基金信息">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DOM">
                         
-                        <span class="card-title">关于爬虫爬取基金信息</span>
+                        <span class="card-title">DOM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1291,31 +1249,15 @@ order by sum(score)desc
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Yuukyou
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">爬虫</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                 </div>
                 
             </div>
